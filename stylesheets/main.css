@@ -130,6 +130,26 @@ figure.profile-picture > figcaption > span {
     font-size: 1.2em;
 }
 
+/* Cards */
+
+aside.for-the-more-curious > h2.display-1 {
+  font-size: 2.0rem;
+  margin: 20px 0;
+}
+
+.card.card-inverse {
+  background-color: rgba(20, 20, 20, .6);
+  border-color: rgb(20, 20, 20);
+}
+
+.card-title {
+  font-size: 1.2em;
+}
+
+.card-text {
+  font-size: 1.0em;
+}
+
 /* Footer */
 
 footer {
