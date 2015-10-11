@@ -13,8 +13,14 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1;
 }
 
+/* Table */
+
 .table > tbody > tr > td {
   vertical-align: middle;
+}
+
+table.about-masatoshi {
+  border: 5px solid #0099CC;
 }
 
 /* Navbar logo
