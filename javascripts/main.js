@@ -1,3 +1,4 @@
+// Blinking eyes
 setInterval(function() {
-    $('#blink').fadeOut(1000).fadeIn(1000);
+    $('.flashing-dot').fadeOut(1000).fadeIn(1000);
 }, 2000);
