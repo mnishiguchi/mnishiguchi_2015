@@ -37,7 +37,7 @@ nav a.logo {
 }
 
 nav a.logo:hover {
-  color: #627AAC;
+  color: #3B5998;
   text-decoration: none;
 }
 
@@ -104,20 +104,20 @@ figure.profile-picture > img.masa-chinatown {
   width: 300px;
 }
 
-figure.profile-picture > .flashing-dot {
+figure.profile-picture > .flashing {
   position: absolute;
-  font-size: 10px;
-  color: #F00;
+  font-size: 30px;
+  color: rgba(160, 0, 0, 0.5);
 }
 
-figure.profile-picture > .flashing-dot.left {
-  top: 99px;
-  left: 45px;
+figure.profile-picture > .flashing.left {
+  top: 160px;
+  left: 90px;
 }
 
-figure.profile-picture > .flashing-dot.right {
-  top: 97px;
-  left: 85px;
+figure.profile-picture > .flashing.right {
+  top: 130px;
+  left: 210px;
 }
 
 figure.profile-picture > figcaption {
@@ -144,7 +144,7 @@ aside.for-the-more-curious > h2.display-1 {
 }
 
 .card.card-inverse {
-  background-color: rgba(20, 20, 20, .6);
+  background-color: rgba(20, 20, 20, 0.6);
   border-color: rgb(20, 20, 20);
 }
 
@@ -237,7 +237,7 @@ footer li {
 .btn-custom-outline.active, .open > .dropdown-toggle.btn-custom-outline {
     color: #33A6CC;
     background: #F0F0FF;
-    border-color: #33a6CC;
+    border-color: #33A6CC;
 }
 .btn-custom-outline:active, .btn-custom-outline.active {
     border-color: #007299;
