@@ -107,17 +107,18 @@ figure.profile-picture > img.masa-chinatown {
 figure.profile-picture > .flashing {
   position: absolute;
   font-size: 30px;
-  color: rgba(160, 0, 0, 0.5);
 }
 
 figure.profile-picture > .flashing.left {
   top: 160px;
   left: 90px;
+  color: rgba(160, 0, 0, 0.5);
 }
 
 figure.profile-picture > .flashing.right {
   top: 130px;
   left: 210px;
+  color: rgba(160, 0, 0, 0.7);
 }
 
 figure.profile-picture > figcaption {
