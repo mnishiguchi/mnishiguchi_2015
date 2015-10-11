@@ -8,66 +8,54 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="stylesheets/main.css">
+    <link rel="stylesheet" href="stylesheets/buttons.css">
   </head>
 
   <body>
-    <nav class="navbar navbar-inverse navbar-static-top">
-      <a class="navbar-brand" href="#">Masatoshi Nishiguchi</a>
-      <ul class="nav nav-pills">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Contact</a>
-        </li>
-      </ul>
-    </nav>
-
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
-      <div class="container">
-        <h1>Hello, world!</h1>
-        <p>This is Masatoshi Nishiguchi's website.</p>
-        <p>
-          <a class="btn btn-primary btn-lg" href="https://github.com/mnishiguchi" role="button">
-            Learn more &raquo;
-          </a>
-        </p>
-      </div>
-    </div>
-
     <div class="container">
-      <!-- Example row of columns -->
-      <div class="row">
-        <div class="col-md-4">
-          <h2>My item 1</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus</p>
-          <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-        </div>
-        <div class="col-md-4">
-          <h2>My item 2</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus</p>
-          <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-       </div>
-        <div class="col-md-4">
-          <h2>My item 3</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus</p>
-          <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+      <!-- Site header -->
+      <header>
+        <nav class="navbar navbar-inverse navbar-static-top">
+          <a class="navbar-brand" href="index.html">Masatoshi Nishiguchi</a>
+          <ul class="nav nav-pills">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.linkedin.com/in/mnishiguchi">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="mailto:masatoshi.nishiguchi@udc.edu?Subject=Contact%20from%20http://mnishiguchi.github.io/">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- Main jumbotron -->
+      <div class="jumbotron">
+        <div class="container">
+          <h1 id="this-is-masatoshi">This is Masatoshi Nishiguchi</h1>
+          <p>Ruby on Rails developer</p>
+          <p id="blink">Currently under construction.</p>
+          <p>
+            <a class="btn btn-fb btn-lg" href="https://github.com/mnishiguchi" role="button">
+              My code &raquo;
+            </a>
+          </p>
         </div>
       </div>
-
-      <hr>
 
       <footer>
-        <p>&copy; Masatoshi Nishiguchi 2014</p>
+        <p>&copy; Masatoshi Nishiguchi 2015</p>
       </footer>
     </div> <!-- /container -->
 
     <!-- jQuery first, then Bootstrap JS. -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js"></script>
+    <script src="javascripts/main.js"></script>
   </body>
 </html>
