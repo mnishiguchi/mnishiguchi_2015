@@ -1,10 +1,10 @@
 body {
-  background-color: #fefefe
+  background-color: #FEFEFE;
   font-family: "proxima-nova", Helvetica, Arial, sans-serif;
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1000px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -16,21 +16,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #blink {
-  color: #880000;
+  color: #800;
 }
 
 /* Navbar brand */
 
 nav a.navbar-brand {
-  font-weight: 800;
-  font-size: 32px;
+  font-weight: bold;
+  font-size: 2.0em;
   letter-spacing: -0.04em;
   text-transform: uppercase;
-  color: #000;
+  color: #3B5998;
 }
 
 nav a.navbar-brand:hover {
-  color: #333;
+  color: #627AAC;
   text-decoration: none;
 }
 
@@ -57,7 +57,7 @@ nav a.navbar-brand:hover {
 /* Jumbotron */
 
 h1#this-is-masatoshi {
-  font-size: 64px;
+  font-size: 3.5em;
   line-height: 82px;
   font-weight: 700;
   letter-spacing: -0.04em;
@@ -69,6 +69,11 @@ p {
     line-height: 1.5;
     font-weight: 300;
     color: #000;
+}
+
+.masatoshi-img {
+  height: 300px;
+  width: 300px;
 }
 
 /* footer */

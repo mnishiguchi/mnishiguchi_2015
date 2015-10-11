@@ -16,14 +16,14 @@
 /* ".btn-fb" */
 
 .btn-fb {
-    background: #627aac;
-    color: #ffffff;
+    background: #627AAC;
+    color: #FFF;
 }
 
 .btn-fb:hover, .btn-fb:focus, .btn-fb:active,
 .btn-fb.active, .open > .dropdown-toggle.btn-fb {
-    background: #3b5998;
-    color: #ffffff;
+    background: #3B5998;
+    color: #FFF;
 }
 
 .btn-fb:active, .btn-fb.active {
