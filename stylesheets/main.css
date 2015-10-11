@@ -53,7 +53,7 @@ nav a.navbar-brand:hover {
 /* Jumbotron */
 
 .jumbotron {
-    height: 260px;
+  background-color: #E2F4FB;
 }
 
 h1#this-is-masatoshi {
@@ -77,6 +77,7 @@ figure.profile-picture {
   position: relative;
   height: 300px;
   width: 300px;
+  text-align: center;
 }
 
 figure.profile-picture > img.masa-chinatown {
@@ -113,7 +114,7 @@ figure.profile-picture > figcaption {
 figure.profile-picture > figcaption > span {
     margin: 0;
     padding: 0 0.8em;
-    font-size: 1.5em;
+    font-size: 1.2em;
 }
 
 /* Footer */
