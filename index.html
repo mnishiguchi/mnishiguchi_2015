@@ -22,10 +22,40 @@
 
   <body>
     <div class="container">
+
       <!-- Site header -->
       <header>
-        <nav class="navbar navbar-inverse navbar-static-top">
-          <a class="navbar-brand" href="#">MN</a>
+        <!-- Collapsed content -->
+        <div class="collapse" id="collapsed-content">
+          <div class="bg-inverse p-a">
+
+            <!-- Jumbotron -->
+            <div class="jumbotron">
+              <div class="container">
+                <h1 id="this-is-masatoshi">Hello!!!<br />This is Masatoshi Nishiguchi</h1>
+                <p></p>
+                <a class="btn btn-fb btn-lg" href="https://github.com/mnishiguchi" role="button">
+                  My code &raquo;
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Navbar -->
+        <nav class="navbar">
+          <!-- Hamburger button -->
+          <div class="navbar-brand toggler-wrapper">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsed-content">
+              &#9776;
+            </button>
+          </div>
+
+          <!-- Logo -->
+          <a class="logo" href="#">Masatoshi Nishiguchi</a>
+
+          <!-- Nav links -->
           <ul class="nav nav-pills pull-right">
             <li class="nav-item">
               <a class="nav-link" href="https://www.linkedin.com/in/mnishiguchi">About</a>
@@ -37,20 +67,9 @@
         </nav>
       </header>
 
-      <!-- Jumbotron -->
-      <div class="jumbotron">
-        <div class="container">
-          <h1 id="this-is-masatoshi">This is Masatoshi Nishiguchi</h1>
-          <p></p>
-          <a class="btn btn-fb btn-lg" href="https://github.com/mnishiguchi" role="button">
-            My code &raquo;
-          </a>
-        </div>
-      </div>
-
-      <!-- Picture -->
       <div class="row">
 
+        <!-- Picture -->
         <div class="col-md-5">
           <figure class="profile-picture">
             <img class="masa-chinatown" src="images/masa_chinatown.png" alt="masatoshi">
@@ -60,8 +79,8 @@
           </figure>
         </div>
 
+        <!-- Table -->
         <div class="col-md-7">
-          <!-- Table -->
           <table class="table table-bordered table-striped">
             <tbody>
               <tr>
@@ -70,7 +89,7 @@
               </tr>
               <tr>
                 <td><b>Tools</b></td>
-                <td>iTerm, Sublime Text, NetBeans, Xcode, Vim</td>
+                <td>iTerm, Sublime Text, Android Studio, NetBeans, Xcode, Vim</td>
               </tr>
               <tr>
                 <td><b>Languages</b></td>
@@ -97,6 +116,7 @@
       <footer>
         <p>&copy; Masatoshi Nishiguchi 2015</p>
       </footer>
+
     </div> <!-- /container -->
 
     <!-- jQuery first, then Bootstrap JS. -->

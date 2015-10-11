@@ -1,6 +1,6 @@
-/* https://bootstrapbay.com/blog/bootstrap-button-styles/ */
+/* reference: https://bootstrapbay.com/blog/bootstrap-button-styles/ */
 
-/* ".btn" (universal settings) */
+/* .btn (universal settings) */
 
 .btn {
     border: 0 none;
@@ -13,7 +13,7 @@
     outline: 0 none;
 }
 
-/* ".btn-fb" */
+/* .btn-fb */
 
 .btn-fb {
     background: #627AAC;
@@ -31,22 +31,22 @@
     box-shadow: none;
 }
 
-/* ".btn-outline-primary" */
+/* .btn-custom-outline */
 
-.btn-outline-primary {
+.btn-custom-outline {
     background: none;
     padding: 12px 22px;
-    border: 2px solid #0099cc;
-    color: #0099cc;
+    border: 2px solid #0099CC;
+    color: #0099CC;
 }
 
-.btn-outline-primary:hover, .btn-outline-primary:focus, .btn-outline-primary:active,
-.btn-outline-primary.active, .open > .dropdown-toggle.btn-outline-primary {
-    color: #33a6cc;
-    background: #f0f0ff;
-    border-color: #33a6cc;
+.btn-custom-outline:hover, .btn-custom-outline:focus, .btn-custom-outline:active,
+.btn-custom-outline.active, .open > .dropdown-toggle.btn-custom-outline {
+    color: #33A6CC;
+    background: #F0F0FF;
+    border-color: #33a6CC;
 }
-.btn-outline-primary:active, .btn-outline-primary.active {
+.btn-custom-outline:active, .btn-custom-outline.active {
     border-color: #007299;
     color: #007299;
     box-shadow: none;

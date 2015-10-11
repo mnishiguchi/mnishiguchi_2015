@@ -1,3 +1,5 @@
+/* Global */
+
 body {
   background-color: #FEFEFE;
   font-family: "proxima-nova", Helvetica, Arial, sans-serif;
@@ -15,24 +17,34 @@ h1, h2, h3, h4, h5, h6 {
   vertical-align: middle;
 }
 
-/* Navbar brand */
+/* Navbar logo
+   Note: I defined logo because navbar-brand conflicts with toggler
+ */
 
-nav a.navbar-brand {
+nav a.logo {
   font-weight: bold;
   font-size: 2.0em;
   letter-spacing: -0.04em;
   text-transform: uppercase;
   color: #3B5998;
+  text-decoration: none;
 }
 
-nav a.navbar-brand:hover {
+nav a.logo:hover {
   color: #627AAC;
   text-decoration: none;
 }
 
+/* Navbar padding */
+
+.navbar {
+  padding-left: 0;
+}
+
 /* Navbar height */
 
-.navbar-brand,
+.toggler-wrapper,
+.logo,
 .navbar .nav li a {
   line-height: 64px;
   height: 64;
@@ -53,6 +65,7 @@ nav a.navbar-brand:hover {
 /* Jumbotron */
 
 .jumbotron {
+  margin-bottom: 0px;
 }
 
 h1#this-is-masatoshi {
