@@ -1,0 +1,35 @@
+<!--
+DynamicTabs
+==
+NOTE: The contentPane directive is required as a child, which requires
+a title property.
+-->
+
+<div class="dynamic_tabs">
+
+  <!-- Navigation bar (Tabs) -->
+  <div class="card card-block">
+
+    <ul class="nav nav-tabs">
+      <li
+        ng-repeat="pane in vm.panes"
+        ng-class="{ active : pane.selected }"
+        class="nav-item">
+
+        <a
+          ng-click="vm.setSelected( pane )"
+          class="nav-link"
+          href="">
+          {{ pane.title }}  <!-- Title is provided through contentPane directive -->
+        </a>
+
+      </li>
+
+    </ul>
+
+    <!-- Selected content will be transcluded here. -->
+    <ng-transclude></ng-transclude>
+
+  </div><!-- /card -->
+
+</div><!-- /dynamic_tabs -->

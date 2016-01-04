@@ -2,7 +2,7 @@
 
 body {
   background-color: #FEFEFE;
-  font-family: "proxima-nova", Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
 .container {
@@ -41,14 +41,12 @@ nav a.logo:hover {
   text-decoration: none;
 }
 
-/* Navbar padding */
-
+/* navbar padding */
 .navbar {
   padding-left: 0;
 }
 
-/* Navbar height */
-
+/* navbar height */
 .toggler-wrapper,
 .logo,
 .navbar .nav li a {
@@ -56,8 +54,6 @@ nav a.logo:hover {
   height: 64;
   padding-top: 0;
 }
-
-/* Navbar links */
 
 .navbar .nav li > a {
   color: #777;
@@ -69,75 +65,50 @@ nav a.logo:hover {
   color: #333;
 }
 
-
-/* Profile picture */
-
-figure.profile-picture {
+.profile-picture {
   position: relative;
-  height: 300px;
-  width: 300px;
+  height: 200px;
+  width: 200px;
   text-align: center;
 }
 
-figure.profile-picture > img.masa-chinatown {
-  height: 300px;
-  width: 300px;
+.profile-picture > img.masa-chinatown {
+  height: 200px;
+  width: 200px;
 }
 
-figure.profile-picture > .flashing {
+.profile-picture > .flashing {
   position: absolute;
   font-size: 30px;
 }
 
-figure.profile-picture > .flashing.left {
-  top: 160px;
-  left: 90px;
+.profile-picture > .flashing.left {
+  top: 105px;
+  left: 60px;
   color: rgba(160, 0, 0, 0.5);
 }
 
-figure.profile-picture > .flashing.right {
-  top: 130px;
-  left: 210px;
+.profile-picture > .flashing.right {
+  top: 80px;
+  left: 140px;
   color: rgba(160, 0, 0, 0.7);
 }
 
-figure.profile-picture > figcaption {
+.profile-picture > figcaption {
   position: absolute;
   bottom: 0px;
   color: #fff;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.5);
   width: 100%;
   max-width: 300px;
-  padding: 1em 0;
+  padding: 0.5em 0;
 }
 
-figure.profile-picture > figcaption > span {
+.profile-picture > figcaption > span {
     margin: 0;
     padding: 0 0.8em;
     font-size: 1.2em;
 }
-
-/* Cards */
-
-aside.for-the-more-curious > h2.display-1 {
-  font-size: 2.0rem;
-  margin: 20px 0;
-}
-
-.card.card-inverse {
-  background-color: rgba(20, 20, 20, 0.6);
-  border-color: rgb(20, 20, 20);
-}
-
-.card-title {
-  font-size: 1.2em;
-}
-
-.card-text {
-  font-size: 1.0em;
-}
-
-/* Footer */
 
 footer {
   line-height: 3em;
@@ -170,3 +141,30 @@ footer li {
   margin-left: 15px;
 }
 
+
+/*
+   For smart phones.
+ */
+
+
+@media (max-width: 34em) {
+  nav a.logo {
+    font-size: 1.1em;
+  }
+
+  footer{
+    font-size: 0.8em;
+  }
+
+  nav .nav-item .nav-link > i {
+    font-size: 0.8em;
+  }
+
+  .toggler-wrapper,
+  .logo,
+  .navbar .nav li a {
+    line-height: 32px;
+    height: 32px;
+    padding-top: 0;
+  }
+}

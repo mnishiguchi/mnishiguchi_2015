@@ -10,11 +10,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <meta name="description" content="Masatoshi Nishiguchi's profile page">
+    <meta name="description" content="Masatoshi Nishiguchi's demos">
     <meta name="keywords" content="Programming, Coding, JavaScript, Angular, Ruby on Rails">
     <meta name="author" content="Masatoshi Nishiguchi">
 
-    <title>Masatoshi Nishiguchi</title>
+    <title>Demos | Masatoshi Nishiguchi</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
@@ -32,37 +32,7 @@
         <!-- Collapsed content -->
         <div class="collapse" id="collapsed-content">
 
-
-          <!-- Table: About masatoshi -->
-          <table class="about-masatoshi table table-bordered table-striped">
-            <tbody>
-              <tr>
-                <td><b>Machine</b></td>
-                <td>MacBook Air</td>
-              </tr>
-              <tr>
-                <td><b>Tools</b></td>
-                <td>iTerm, Sublime Text, Android Studio, NetBeans, Xcode, Vim</td>
-              </tr>
-              <tr>
-                <td><b>Languages</b></td>
-                <td>Ruby on Rails, Java (Android), JavaScript, CoffeeScript, jQuery, React.js, Python, C/C++ and Japanese</td>
-              </tr>
-              <tr>
-                <td><b>Others</b></td>
-                <td>Git, Linux, Heroku, SQLite, PostgreSQL</td>
-              </tr>
-              <tr>
-                <td><b>Coffee</b></td>
-                <td>Starbucks Pike Place Roast (no room for milk)</td>
-              </tr>
-              <tr>
-                <td><b>Hobbies</b></td>
-                <td>Rock climbing, Playing the guiter</td>
-              </tr>
-            </tbody>
-          </table>
-
+          <!-- some hidden items -->
 
         </div>
 
@@ -99,28 +69,42 @@
       <div class="row">
 
         <!-- Picture -->
-        <div class="col-md-5">
+        <div class="col-md-3">
           <figure class="profile-picture">
-            <img class="masa-chinatown" src="images/masa_chinatown.png" alt="masatoshi">
+            <img class="masa-chinatown" src="images/masa_chinatown.jpg" alt="masatoshi">
             <span class="flashing left"><i class="fa fa-heart"></i></span>
             <span class="flashing right"><i class="fa fa-heart"></i></span>
-            <figcaption><span></span></figcaption>
+            <figcaption><span>Programmer</span></figcaption>
           </figure>
         </div>
 
         <!-- Table: Demos -->
-        <div class="col-md-7">
+        <div class="col-md-9">
 
           <table class="table table-bordered table-striped">
             <tbody>
               <tr ng-repeat="demo in app.demos track by $index">
-                <td><b><a ng-href="{{ demo.demoUrl }}">{{ demo.name }}</a></b></td>
-                <td>{{ demo.desc }}</td>
-                <td><a ng-href="{{ demo.githubUrl }}"><i class="fa fa-github-alt"></i></a></td>
+                <td>
+                  <a ng-href="{{ demo.demoUrl }}">
+                    <b>{{ demo.name }}</b>
+                  </a>
+                </td>
+                <td>
+                  {{ demo.type }}
+                </td>
+                <td>
+                  {{ demo.desc }}
+                </td>
+                <td>
+                  <a ng-href="{{ demo.githubUrl }}">
+                    <i class="fa fa-github-alt"></i>
+                  </a>
+                </td>
               </tr>
             </tbody>
           </table>
-        </div>
+
+        </div><!-- /col -->
 
       </div> <!-- /row -->
 
@@ -135,128 +119,11 @@
     <!-- Load jQuery first, then Bootstrap JS. -->
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <!-- Load lodash. -->
+    <!-- Load lodash -->
     <script src="node_modules/lodash/index.js"></script>
-
     <!-- Load Angular -->
     <script src="node_modules/angular/angular.min.js"></script>
-
-    <script>
-
-      /**
-       * Get icons blinking.
-       */
-      $(document).ready( function() {
-
-        // Blinking eyes
-        setInterval(function() {
-            $('.flashing').fadeOut(1000).fadeIn(1000);
-        }, 2000);
-
-      });
-
-
-      // ----------------------------------------------------------------------- //
-      // ----------------------------------------------------------------------- //
-
-
-      /**
-       * The main Augular module for this website.
-       */
-      (function() {
-
-        // Module declaration.
-        angular
-          .module( "app", [ ] );
-
-
-        // --------------------------------------------------------------------- //
-        // --------------------------------------------------------------------- //
-
-
-        angular
-          .module( "app" )
-          .controller( "AppController", AppController );
-
-        AppController.$inject = [ ];
-        function AppController() {
-
-          vm = this;
-
-          // Initial state.
-          vm.demos = [];
-
-          // Load demo data.
-          vm.demos = addUrlsToDemos( demos );
-
-
-          /**
-           * Generate demoUrl and githubUrl for each demo based on my convention.
-           * @param demos A JSON array of demo info.
-           */
-          function addUrlsToDemos( demos ) {
-
-            var extendedWithUrls = _.map(demos, function(demo) {
-
-              var githubBaseUrl = "https://github.com/mnishiguchi/mnishiguchi.github.io/tree/master/demos/";
-
-              // Generate urls based on my convention and create an object with them.
-              var urls = {
-                demoUrl:  [ "demos/", demo.name, "/index.html" ].join(""),
-                githubUrl: [ githubBaseUrl, demo.name, "/index.html" ].join(""),
-              }
-
-              // Extend each demo object with urls.
-              return _.extend({}, demo, urls);
-
-            });
-
-            return extendedWithUrls;
-
-          } // addUrlsToDemos
-
-        } // end AppController
-
-
-        // ---
-        // DEMO DATA
-        // ---
-
-
-        var demos = [
-            {
-              name: "binding_events",
-              desc: "",
-            },
-            {
-              name: "bookstore",
-              desc: "",
-            },
-            {
-              name: "filterable_table",
-              desc: "",
-            },
-            {
-              name: "gemstore",
-              desc: "",
-            },
-            {
-              name: "multi_transclude",
-              desc: "",
-            },
-            {
-              name: "tabbable_panel",
-              desc: "",
-            },
-            {
-              name: "toggling_buttons",
-              desc: "",
-            },
-          ];
-
-
-      })(); // end module
-
-    </script>
+    <!-- Load app's sctipts -->
+    <script src="scripts/main.js"></script>
   </body>
 </html>
