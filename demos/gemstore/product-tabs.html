@@ -1,0 +1,49 @@
+<section>
+  <!--Tab selecters-->
+  <ul class="nav nav-pills">
+    <li ng-class="{ active:vm.isSet(1) }">
+      <a href="" ng-click="vm.setTab(1)">Description</a>
+    </li>
+    <li ng-class="{ active:vm.isSet(2) }">
+      <a href="" ng-click="vm.setTab(2)">Specs</a>
+    </li>
+    <li ng-class="{ active:vm.isSet(3) }">
+      <a href="" ng-click="vm.setTab(3)">Reviews</a>
+    </li>
+  </ul>
+
+  <!--Tab contents-->
+  <div class="panel panel-default">
+
+    <div ng-show="vm.isSet(1)" class="panel-body">
+      <h4>Description</h4>
+      <blockquote>{{ product.description }}</blockquote>
+    </div>
+
+    <div ng-show="vm.isSet(2)" class="panel-body">
+      <h4>Specs</h4>
+      <blockquote>Shine: {{ product.shine }}</blockquote>
+    </div>
+
+    <div ng-show="vm.isSet(3)" class="panel-body">
+      <!--  Product Reviews List -->
+      <ul>
+        <h4>Reviews</h4>
+        <li ng-repeat="review in product.reviews"
+            class="list-unstyled">
+          <blockquote>
+            <strong>{{ review.stars }} Stars</strong><br />
+            {{ review.body }}
+            <cite class="clearfix">—{{ review.author }}</cite>
+          </blockquote>
+        </li>
+      </ul>
+
+      <!--  Review Form -->
+      <product-review-form
+        product="props.product">
+      </product-review-form>
+
+    </div><!--end last panel-->
+  </div><!--end panels wrapper-->
+</section>

@@ -20,6 +20,7 @@
     "angular": "^1.5.0-rc.0",
     "bootstrap": "^4.0.0-alpha.2",
     "font-awesome": "^4.5.0",
-    "jquery": "^2.1.4"
+    "jquery": "^2.1.4",
+    "lodash": "^3.10.1"
   }
 }

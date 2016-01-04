@@ -1,0 +1,44 @@
+<table class="table table-bordered">
+  <col width="80%" />
+  <col width="20%" />
+  <thead>
+    <tr>
+      <th>
+        Name
+      </th>
+      <th>
+        Price
+      </th>
+    </tr>
+  </thead>
+
+  <!-- If we have data to display. -->
+  <tbody
+    ng-if="vm.categories.length"
+    ng-repeat="category in vm.categories track by category.name">
+    <tr>
+      <th colspan="2">
+        {{ category.name }}
+      </th>
+    </tr>
+    <tr
+      ng-repeat="product in category.products track by product.name"
+      ng-class="{ 'out-of-stock': ! product.stocked }">
+      <td>
+        {{ product.name }}
+      </td>
+      <td>
+        {{ product.price | currency }}
+      </td>
+    </tr>
+  </tbody>
+
+  <!-- If we have no data to display. -->
+  <tbody ng-if="( ! vm.categories.length )">
+    <tr>
+      <td colspan="2" class="no-data">
+        <em>No products match your criteria.</em>
+      </td>
+    </td>
+  </tbody>
+</table>

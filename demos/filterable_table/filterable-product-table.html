@@ -1,0 +1,16 @@
+<div id="filterable-product-table-wrapper">
+
+  <search-bar
+    filter-text="vm.filterText"
+    in-stock-only="vm.inStockOnly"
+    on-user-input="vm.handleUserInput( filterText, inStockOnly )">
+  </search-bar>
+
+  <!-- props.products is passed in from parent -->
+  <product-table
+    products="props.products"
+    filter-text="vm.filterText"
+    in-stock-only="vm.inStockOnly">
+  </product-table>
+
+</div>

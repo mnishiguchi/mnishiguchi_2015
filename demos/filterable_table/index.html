@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html ng-app="FilterableProductTable">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Filterable table</title>
+
+  <!-- Load styles. -->
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+
+<body ng-controller="AppController as vm">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 col-sm-offset-3">
+
+        <h1>
+          Filterable table component
+        </h1>
+
+        <div class="well">
+
+          <filterable-product-table
+            products="vm.products">
+          </filterable-product-table>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Load scripts. -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.min.js"></script>
+  <script type="text/javascript" src="js/filterable-product-table.js"></script>
+
+</body>
+</html>

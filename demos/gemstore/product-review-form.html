@@ -1,0 +1,70 @@
+<form novalidate
+  name="reviewForm"
+  ng-submit="reviewForm.$valid && vm.addReview(product)">
+
+
+  <h4>Submit a Review</h4>
+
+
+  <!--  Live Preview -->
+  <div class="well">
+    <strong>{{ vm.review.stars }} Stars</strong><br />
+    {{ vm.review.body }}
+    <cite class="clearfix">—{{ vm.review.author }}</cite>
+  </div>
+
+
+  <!--  Input fields -->
+  <fieldset class="form-group">
+
+    <select required
+      ng-model="vm.review.stars"
+      class="form-control"
+      ng-options="stars for stars in [5,4,3,2,1]"
+      title="Stars" >
+
+      <option value="">Rate the Product</option>
+
+    </select>
+
+  </fieldset>
+
+
+  <fieldset class="form-group">
+
+    <textarea required
+      ng-model="vm.review.body"
+      class="form-control"
+      placeholder="Write a short review of the product..."
+      title="Review">
+    </textarea>
+
+  </fieldset>
+
+
+  <fieldset class="form-group">
+
+    <input type="email" required
+      ng-model="vm.review.author"
+      class="form-control"
+      placeholder="jimmyDean@example.org"
+      title="Email" />
+
+  </fieldset>
+
+
+  <hr><!--DEBUG-->
+  <div> reviewForm: {{ (reviewForm.$valid) ? "VALID" : "NOT VALID" }} </div>
+  <pre> Product: {{ product }} </pre><!--DEBUG-->
+
+
+  <!--  Submit -->
+  <fieldset class="form-group">
+
+    <input type="submit"
+      class="btn btn-primary pull-right"
+      value="Submit Review" />
+
+  </fieldset>
+
+</form>

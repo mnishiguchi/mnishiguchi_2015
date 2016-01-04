@@ -1,5 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html
+  lang="en"
+  ng-app="app"
+  ng-controller="AppController as app">
+
   <head>
 
     <meta charset="utf-8">
@@ -15,9 +19,9 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="/node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
     <!-- Custom styles -->
-    <link rel="stylesheet" href="stylesheets/main.css">
+    <link rel="stylesheet" href="css/main.css">
   </head>
 
   <body>
@@ -27,20 +31,39 @@
       <header>
         <!-- Collapsed content -->
         <div class="collapse" id="collapsed-content">
-          <div class="bg-inverse p-a">
 
-            <!-- Jumbotron -->
-            <div class="jumbotron">
-              <div class="container">
-                <h1 id="this-is-masatoshi">Hello!!!<br />This is Masatoshi Nishiguchi.</h1>
-                <p>I love coding. Check out my code if you like.</p>
-                <a class="btn btn-fb btn-lg" href="demo/routes/index.html" target="_blank" role="button">
-                  Demo &raquo;
-                </a>
-              </div>
-            </div>
 
-          </div>
+          <!-- Table: About masatoshi -->
+          <table class="about-masatoshi table table-bordered table-striped">
+            <tbody>
+              <tr>
+                <td><b>Machine</b></td>
+                <td>MacBook Air</td>
+              </tr>
+              <tr>
+                <td><b>Tools</b></td>
+                <td>iTerm, Sublime Text, Android Studio, NetBeans, Xcode, Vim</td>
+              </tr>
+              <tr>
+                <td><b>Languages</b></td>
+                <td>Ruby on Rails, Java (Android), JavaScript, CoffeeScript, jQuery, React.js, Python, C/C++ and Japanese</td>
+              </tr>
+              <tr>
+                <td><b>Others</b></td>
+                <td>Git, Linux, Heroku, SQLite, PostgreSQL</td>
+              </tr>
+              <tr>
+                <td><b>Coffee</b></td>
+                <td>Starbucks Pike Place Roast (no room for milk)</td>
+              </tr>
+              <tr>
+                <td><b>Hobbies</b></td>
+                <td>Rock climbing, Playing the guiter</td>
+              </tr>
+            </tbody>
+          </table>
+
+
         </div>
 
         <!-- Navbar -->
@@ -81,38 +104,19 @@
             <img class="masa-chinatown" src="images/masa_chinatown.png" alt="masatoshi">
             <span class="flashing left"><i class="fa fa-heart"></i></span>
             <span class="flashing right"><i class="fa fa-heart"></i></span>
-            <figcaption><span>Ruby on Rails developer</span></figcaption>
+            <figcaption><span></span></figcaption>
           </figure>
         </div>
 
-        <!-- Table -->
+        <!-- Table: Demos -->
         <div class="col-md-7">
 
-          <table class="about-masatoshi table table-bordered table-striped">
+          <table class="table table-bordered table-striped">
             <tbody>
-              <tr>
-                <td><b>Machine</b></td>
-                <td>MacBook Air</td>
-              </tr>
-              <tr>
-                <td><b>Tools</b></td>
-                <td>iTerm, Sublime Text, Android Studio, NetBeans, Xcode, Vim</td>
-              </tr>
-              <tr>
-                <td><b>Languages</b></td>
-                <td>Ruby on Rails, Java (Android), JavaScript, CoffeeScript, jQuery, React.js, Python, C/C++ and Japanese</td>
-              </tr>
-              <tr>
-                <td><b>Others</b></td>
-                <td>Git, Linux, Heroku, SQLite, PostgreSQL</td>
-              </tr>
-              <tr>
-                <td><b>Coffee</b></td>
-                <td>Starbucks Pike Place Roast (no room for milk)</td>
-              </tr>
-              <tr>
-                <td><b>Hobbies</b></td>
-                <td>Rock climbing, Playing the guiter</td>
+              <tr ng-repeat="demo in app.demos track by $index">
+                <td><b><a ng-href="{{ demo.demoUrl }}">{{ demo.name }}</a></b></td>
+                <td>{{ demo.desc }}</td>
+                <td><a ng-href="{{ demo.githubUrl }}"><i class="fa fa-github-alt"></i></a></td>
               </tr>
             </tbody>
           </table>
@@ -120,34 +124,6 @@
 
       </div> <!-- /row -->
 
-      <aside class="for-the-more-curious" >
-        <h2 class="display-1">For the more curious...</h2>
-
-        <!-- Cards -->
-        <div class="card-deck-wrapper">
-          <div class="card-deck">
-            <div class="card card-inverse">
-              <div class="card-block">
-                <h4 class="card-title">What does Nishi mean?</h4>
-                <p class="card-text">It means the west in Japanese. Its kanji is 西.</p>
-              </div>
-            </div>
-            <div class="card card-inverse">
-              <div class="card-block">
-                <h4 class="card-title">What does Guchi mean?</h4>
-                <p class="card-text">Guchi is a variant of kuchi, which means a month or opening. Its kanji is 口.</p>
-              </div>
-            </div>
-            <div class="card card-inverse">
-              <div class="card-block">
-                <h4 class="card-title">What does Nishiguchi mean?</h4>
-                <p class="card-text">With Nishi and Guchi together, it means a west entrance/exit.
-                You will see 西口 on signs at train stations in Japan.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </aside>
 
       <footer>
         <p>&copy; Masatoshi Nishiguchi 2015</p>
@@ -155,9 +131,132 @@
 
     </div> <!-- /container -->
 
-    <!-- jQuery first, then Bootstrap JS. -->
+
+    <!-- Load jQuery first, then Bootstrap JS. -->
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="javascripts/main.js"></script>
+    <!-- Load lodash. -->
+    <script src="node_modules/lodash/index.js"></script>
+
+    <!-- Load Angular -->
+    <script src="node_modules/angular/angular.min.js"></script>
+
+    <script>
+
+      /**
+       * Get icons blinking.
+       */
+      $(document).ready( function() {
+
+        // Blinking eyes
+        setInterval(function() {
+            $('.flashing').fadeOut(1000).fadeIn(1000);
+        }, 2000);
+
+      });
+
+
+      // ----------------------------------------------------------------------- //
+      // ----------------------------------------------------------------------- //
+
+
+      /**
+       * The main Augular module for this website.
+       */
+      (function() {
+
+        // Module declaration.
+        angular
+          .module( "app", [ ] );
+
+
+        // --------------------------------------------------------------------- //
+        // --------------------------------------------------------------------- //
+
+
+        angular
+          .module( "app" )
+          .controller( "AppController", AppController );
+
+        AppController.$inject = [ ];
+        function AppController() {
+
+          vm = this;
+
+          // Initial state.
+          vm.demos = [];
+
+          // Load demo data.
+          vm.demos = addUrlsToDemos( demos );
+
+
+          /**
+           * Generate demoUrl and githubUrl for each demo based on my convention.
+           * @param demos A JSON array of demo info.
+           */
+          function addUrlsToDemos( demos ) {
+
+            var extendedWithUrls = _.map(demos, function(demo) {
+
+              var githubBaseUrl = "https://github.com/mnishiguchi/mnishiguchi.github.io/tree/master/demos/";
+
+              // Generate urls based on my convention and create an object with them.
+              var urls = {
+                demoUrl:  [ "demos/", demo.name, "/index.html" ].join(""),
+                githubUrl: [ githubBaseUrl, demo.name, "/index.html" ].join(""),
+              }
+
+              // Extend each demo object with urls.
+              return _.extend({}, demo, urls);
+
+            });
+
+            return extendedWithUrls;
+
+          } // addUrlsToDemos
+
+        } // end AppController
+
+
+        // ---
+        // DEMO DATA
+        // ---
+
+
+        var demos = [
+            {
+              name: "binding_events",
+              desc: "",
+            },
+            {
+              name: "bookstore",
+              desc: "",
+            },
+            {
+              name: "filterable_table",
+              desc: "",
+            },
+            {
+              name: "gemstore",
+              desc: "",
+            },
+            {
+              name: "multi_transclude",
+              desc: "",
+            },
+            {
+              name: "tabbable_panel",
+              desc: "",
+            },
+            {
+              name: "toggling_buttons",
+              desc: "",
+            },
+          ];
+
+
+      })(); // end module
+
+    </script>
   </body>
 </html>

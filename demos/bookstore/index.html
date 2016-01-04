@@ -1,0 +1,61 @@
+<!doctype html>
+
+<html ng-app="myApp"><!-- booud to myApp -->
+  <head>
+    <!-- Include styles -->
+    <link href="https://s3.amazonaws.com/codecademy-content/projects/bootstrap.min.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Roboto:500,300,700,400' rel='stylesheet' type='text/css'>
+    <link href="css/main.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="header">
+      <div class="container">
+        <h1>Masa's Book Store</h1>
+      </div>
+    </div>
+
+    <div class="main" ng-controller="MainController"><!-- booud to MainController -->
+      <div class="container">
+
+        <!-- {{ variable }}s are defined in MainController, injected through $scope -->
+
+        <h1>{{ title }}</h1>
+        <h2>{{ promo }}</h2>
+
+        <div ng-repeat="product in products" class="col-sm-6">
+          <div class="thumbnail">
+            <a href="{{ product.url }}" target="_blank">
+              <img ng-src="{{ product.cover }}">
+            </a>
+            <p class="title">{{ product.name | uppercase }}</p>
+            <p class="price">{{ product.price | currency }}</p>
+            <p class="date">{{ product.pubdate | date }}</p>
+            <div class="rating">
+              <p class="likes" ng-click="likeOne($index)">+ {{ product.likes }}</p>
+              <p class="dislikes" ng-click="dislikeOne($index)">+ {{ product.dislikes }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="container">
+        <h2>Available for iPhone and Android.</h2>
+        <img src="https://s3.amazonaws.com/codecademy-content/projects/shutterbugg/app-store.png" width="120px" />
+        <img src="https://s3.amazonaws.com/codecademy-content/projects/shutterbugg/google-play.png" width="110px" />
+      </div>
+    </div>
+
+    <!-- Include AngularJS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js"></script>
+
+    <!-- Include Modules -->
+    <script src="js/app.js"></script>
+
+    <!-- Include Controllers -->
+    <script src="js/controllers/MainController.js"></script>
+
+  </body>
+</html>
