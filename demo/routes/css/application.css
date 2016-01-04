@@ -1,0 +1,17 @@
+/*
+  .ng-invalid.ng-touched {
+    background-color: #FA787E;
+  }
+
+  .ng-valid.ng-touched {
+    background-color: #78FA89;
+  }
+*/
+
+.ng-invalid.ng-touched {
+  border-color: #FA787E;
+}
+
+.ng-valid.ng-touched {
+  border-color: #78FA89;
+}
