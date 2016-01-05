@@ -1,42 +1,60 @@
 <!DOCTYPE html>
 
-<html ng-app="FilterableProductTable">
+<html
+  ng-app="app"
+  ng-controller="AppController as app" >
 
 <head>
   <meta charset="utf-8">
 
-  <title>Filterable table</title>
+  <title>Filterable table | Masatoshi Nishiguchi</title>
 
-  <!-- Load styles. -->
-  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
-  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <!-- Load Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha256-xWeRKjzyg6bep9D1AsHzUPEWHbWMzlRc84Z0aG+tyms= sha512-mGIRU0bcPaVjr7BceESkC37zD6sEccxE+RJyQABbbKNe83Y68+PyPM5nrE1zvbQZkSHDCJEtnAcodbhlq2/EkQ==" crossorigin="anonymous">
+
+  <style>
+
+  </style>
 </head>
 
-<body ng-controller="AppController as vm">
+<body>
 
   <div class="container">
     <div class="row">
-      <div class="col-sm-6 col-sm-offset-3">
+      <div class="col-lg-offset-2 col-lg-8">
 
         <h1>
           Filterable table component
         </h1>
 
-        <div class="well">
+        <div class="card card-block">
 
-          <filterable-product-table
-            products="vm.products">
-          </filterable-product-table>
+          <filterable-table
+            products="app.products">
+          </filterable-table>
 
         </div>
+
+        <!-- Display JSON data -->
+        <section class="alert alert-info">
+          <div class="container">
+
+            <div ng-repeat="product in app.products track by $index">
+              <pre>{{ product }}</pre>
+            </div>
+
+          </div>
+        </section>
 
       </div>
     </div>
   </div>
 
   <!-- Load scripts. -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.min.js"></script>
-  <script type="text/javascript" src="js/filterable-product-table.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-rc.0/angular.min.js"></script>
+  <script src="app.js"></script>
+  <script src="components/filterable_table.js"></script>
 
 </body>
 </html>

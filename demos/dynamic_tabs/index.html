@@ -37,11 +37,10 @@
       </div>
     </dynamic-tabs>
 
-    <!-- Display original JSON data with HTML strings -->
+    <!-- Display JSON data with HTML strings -->
     <section class="alert alert-info">
       <div class="container">
 
-        <h4>Original JSON data with HTML strings</h4>
         <div ng-repeat="content in app.contents track by $index">
           <pre>{{ content }}</pre>
         </div>

@@ -1,6 +1,11 @@
-<table class="table table-bordered">
+<!--
+  products
+ -->
+
+<table class="table table-bordered products">
   <col width="80%" />
   <col width="20%" />
+
   <thead>
     <tr>
       <th>
@@ -12,7 +17,9 @@
     </tr>
   </thead>
 
-  <!-- If we have data to display. -->
+  <!--
+    If we have data to display.
+   -->
   <tbody
     ng-if="vm.categories.length"
     ng-repeat="category in vm.categories track by category.name">
@@ -33,7 +40,9 @@
     </tr>
   </tbody>
 
-  <!-- If we have no data to display. -->
+  <!--
+    If we have no data to display.
+   -->
   <tbody ng-if="( ! vm.categories.length )">
     <tr>
       <td colspan="2" class="no-data">
@@ -41,4 +50,14 @@
       </td>
     </td>
   </tbody>
+
 </table>
+
+<!-- Display filtered data -->
+<section class="alert alert-info">
+  <div class="container">
+
+    <pre>{{ vm.categories }}</pre>
+
+  </div>
+</section>

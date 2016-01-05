@@ -59,13 +59,13 @@
 
   app.component( "dynamicTabs", {
 
-      bindings: {},
-      templateUrl: 'dynamic_tabs.html',
+    bindings: {},
+    templateUrl: 'dynamic_tabs.html',
 
-      controllerAs: "vm",
-      controller: DynamicTabsController,
+    controllerAs: "vm",
+    controller: DynamicTabsController,
 
-    });
+  });
 
   DynamicTabsController.$inject = [ ];
   function DynamicTabsController() {

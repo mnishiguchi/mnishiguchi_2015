@@ -1,0 +1,26 @@
+<!--
+  filtableTable
+ -->
+
+<div id="filterable-table">
+
+  <form>
+    <input type="text"
+      ng-model="vm.filterText"
+      placeholder="Search..."/>
+    <p>
+      <label>
+        <input type="checkbox"
+          ng-model="vm.inStockOnly" />
+          Only show products in stock
+      </label>
+    </p>
+  </form>
+
+  <products
+    products="vm.products"
+    filter-text="vm.filterText"
+    in-stock-only="vm.inStockOnly">
+  </products>
+
+</div>
