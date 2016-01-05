@@ -1,0 +1,170 @@
+/* Global */
+
+body {
+  background-color: #FEFEFE;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.container {
+  max-width: 1000px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+/* Table */
+
+.table > tbody > tr > td {
+  vertical-align: middle;
+}
+
+table.table {
+  border: 5px solid #0099CC;
+}
+
+/* Navbar logo
+   Note: I defined logo because navbar-brand conflicts with toggler
+ */
+
+nav a.logo {
+  font-weight: bold;
+  font-size: 2.0em;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  color: #3B5998;
+  text-decoration: none;
+}
+
+nav a.logo:hover {
+  color: #3B5998;
+  text-decoration: none;
+}
+
+/* navbar padding */
+.navbar {
+  padding-left: 0;
+}
+
+/* navbar height */
+.toggler-wrapper,
+.logo,
+.navbar .nav li a {
+  line-height: 64px;
+  height: 64;
+  padding-top: 0;
+}
+
+.navbar .nav li > a {
+  color: #777;
+  font-size: 1.5em;
+}
+
+.navbar .nav li > a:hover,
+.navbar .nav li > a:focus {
+  color: #333;
+}
+
+.profile-picture {
+  position: relative;
+  height: auto;
+  width: 200px;
+  text-align: center;
+}
+
+.profile-picture > img.masa-chinatown {
+  height: 200px;
+  width: 200px;
+}
+
+.profile-picture > .flashing {
+  position: absolute;
+  font-size: 30px;
+}
+
+.profile-picture > .flashing.left {
+  top: 105px;
+  left: 60px;
+  color: rgba(160, 0, 0, 0.5);
+}
+
+.profile-picture > .flashing.right {
+  top: 80px;
+  left: 140px;
+  color: rgba(160, 0, 0, 0.7);
+}
+
+.profile-picture > figcaption {
+  position: absolute;
+  bottom: 0px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 300px;
+  padding: 0.5em 0;
+}
+
+.profile-picture > figcaption > span {
+    margin: 0;
+    padding: 0 0.8em;
+    font-size: 1.2em;
+}
+
+footer {
+  line-height: 3em;
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #EAEAEA;
+  color: #333;
+  clear: both;
+}
+
+footer a {
+  color: #777;
+}
+
+footer a :hover {
+    color: #333;
+}
+
+footer small {
+  float: left;
+}
+
+footer ul {
+  float: right;
+  list-style: none;
+}
+
+footer li {
+  float: left;
+  margin-left: 15px;
+}
+
+
+/*
+   For smart phones.
+ */
+
+
+@media (max-width: 34em) {
+  nav a.logo {
+    font-size: 1.1em;
+  }
+
+  footer{
+    font-size: 0.8em;
+  }
+
+  nav .nav-item .nav-link > i {
+    font-size: 0.8em;
+  }
+
+  .toggler-wrapper,
+  .logo,
+  .navbar .nav li a {
+    line-height: 32px;
+    height: 32px;
+    padding-top: 0;
+  }
+}

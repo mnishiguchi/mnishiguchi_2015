@@ -1,0 +1,167 @@
+<!--
+  Masatoshi Nishiguchi's personal web site
+
+  Filename: index.html
+  Author:   Masatoshi Nishiguchi
+  Date:     October 25, 2015
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="author" content="Masatoshi Nishiguchi">
+  <meta name="description" content="Masatoshi Nishiguchi's personal page">
+
+  <title>Masatoshi Nishiguchi</title>
+
+  <!-- Normalize CSS -->
+  <link rel="stylesheet" href="stylesheets/normalize.css">
+
+  <!-- Custom CSS -->
+  <link href="stylesheets/main.css" rel="stylesheet">
+
+  <!-- Fonts -->
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+  <div class="brand">Masatoshi Nishiguchi</div>
+  <div class="address-bar">http://mnishiguchi.github.io/</div>
+
+  <!-- Navigation -->
+  <header>
+    <ul>
+      <li><a href="#about-me">About me</a></li>
+      <li><a href="#code">code</a></li>
+      <li><a href="#contact-me">contact</a></li>
+    </ul>
+  </header>
+
+  <div class="container">
+    <figure>
+      <img class="masa-photo" src="https://avatars1.githubusercontent.com/u/7563926?v=3&s=200">
+      <figcaption>Ruby on Rails developer</figcaption>
+    </figure>
+
+    <section class="sliderList" id="about-me">
+      <h1>About me</h1>
+
+      <div>
+        <p><span class="lead">Brief introduction</span><br />
+          <small>
+            You can call me Masa. I am a mature and professional individual,
+            living in Washington DC.
+            I studied linguistics and counseling, then was an industrial engineering sales in Japan.
+          </small>
+        </p>
+      </div>
+
+      <div>
+        <p><span class="lead">Why I code?</span><br />
+          <small>
+            In the beginning of year 2014, I met this IT pro at a gym in the northern Virginia.
+            He introduce me to coding.
+            I am getting more and more into creating web and Android apps ever since.
+            <br />
+            Currently, I am preparing to be a professional back-end web developer
+            specializing in Ruby on Rails.
+          </small>
+        </p>
+      </div>
+
+      <div>
+        <p><span class="lead">Hobbies</span><br />
+          <small>
+            Other than coding, I enjoy playing the guitar and rock climbing.
+            Although I am usually busy learning new coding techniques, I am trying
+            to go to gym at least once a week. Also, playing cool heavy metal riffs
+            refreshes my mind.
+          </small>
+        </p>
+      </div>
+    </section>
+
+    <section class="sliderList" id="code">
+      <h1>Coding skills <a href="https://github.com/mnishiguchi" target="_blank">[Github]</a></h1>
+
+      <div>
+        <p><span class="lead">HTML , CSS and JavaScript</span><br />
+          <small>
+            I learned the basics of coding, using Code Academy. Along with that,
+            I acquired basic knowledge of the overall computer science following
+            all the coursework of Harvard's CS50, where I learned not only
+            web development, but also best coding practice and other programming languages
+            including C, PHP and SQL.
+          </small>
+        </p>
+      </div>
+
+      <div>
+        <p><span class="lead">Ruby and Rails</span><br />
+          <small>
+            When finding myself wanting to be a professional web application developer,
+            I came across Michael Hartl's Ruby on Rails tutorial, where I learned
+            practical techniques on Ruby on Rails that enabled me to create professional
+            grade web applications. Also, Michael introduced me to the Unix commandline and Git.
+          </small>
+        </p>
+      </div>
+
+      <div>
+        <p><span class="lead">Java and Android</span><br />
+          <small>
+            I created a few Android apps for myself. Such as quiz apps,
+            moving volume estimator, etc. It is awesome to hear from
+            some users about how much they like my apps.
+          </small>
+        </p>
+      </div>
+
+      <div>
+        <p><span class="lead">Certifications / Coursework</span><br />
+          <small>
+            &diams; Assoc. degree of Computer Science, University of District of Columbia (Jan 2015 - current)<br />
+            &diams; <a href="https://drive.google.com/file/d/0B4-uAIOF0SAHRFI2V1hZZVE5Mmc/view" target="_blank">
+              Web Application Architectures (Coursera)</a><br />
+            &diams; <a href="https://s3.amazonaws.com/verify.edx.org/downloads/d73b55ed118441baa8c73ff60ffca0cb/Certificate.pdf" target="_blank">
+              6.00.1: Introduction to Computer Science and Programming Using Python (MITX)</a><br />
+            &diams; <a href="https://s3.amazonaws.com/verify.edx.org/downloads/cd413cb53fd74c07b853d57c9a1f66b5/Certificate.pdf" target="_blank">
+              COMP102: Introduction to Computing with Java (HKUSTX)</a><br />
+            &diams; <a href="https://www.codecademy.com/mnishiguchi" target="_blank"> Code academy</a><br />
+            &diams; Ruby on Rails Tutorial by Michael Hartl<br />
+            &diams; CS50: Introduction to Computer Science (HarvardX)<br />
+            &diams; CS169.1x: Engineering Software as a Service (UC BerkeleyX)<br />
+            &diams; Programming Mobile Applications for Android Handheld Systems (Coursera)<br />
+            &diams; Etc...
+          </small>
+        </p>
+      </div>
+    </section>
+
+    <section id="contact-me">
+      <h1>Contact me</h1>
+
+      <div>
+        <textarea id="message-to-masa" placeholder="your message"></textarea>
+        <button id="btn-clear-message">Clear</button>
+        <button id="btn-send-message">Send</button>
+      </div>
+    </section>
+
+  </div><!-- /.container -->
+
+  <footer>
+    <small>&copy; 2015 <a href="http://mnishiguchi.github.io/" target="_blank">Masatoshi Nisihguchi</a></small>
+  </footer>
+
+  <!-- JavaScripts -->
+  <script src="javascripts/main.js"></script>
+</body>
+
+</html>

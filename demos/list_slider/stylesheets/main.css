@@ -1,0 +1,361 @@
+/*
+  The styles for Masatoshi Nishiguchi's personal web site
+
+  Filename: main.css
+  Author:   Masatoshi Nishiguchi
+  Date:     October 25, 2015
+*/
+
+
+/**
+ * Universal
+ */
+
+body {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-align: center;
+
+  background: url(http://i.imgur.com/kVJs7Pb.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  color: #FFFFFF;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Josefin Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+h1 {
+  font-size: 3.0em;
+}
+
+p {
+  font-size: 1.25em;
+  line-height: 1.6;
+  color: #FFFFFF;
+}
+
+hr {
+  max-width: 400px;
+  border-color: #999999;
+}
+
+img.masa-photo {
+  height: 300px;
+  width: 300px;
+  margin: 40px 0px 0px 0px;
+  border: 7px solid white;
+  border-radius: 20px;
+}
+
+
+/**
+ * Logo and address
+ */
+
+.brand {
+  font-size: 4.0em;
+  font-weight: 800;
+  margin: 30px 0 0 0;
+}
+
+.address-bar {
+  color: #CCCCCC;
+  font-size: 1.3em;
+  font-weight: 300;
+  margin: 10px 0 30px 0;
+}
+
+
+/**
+ * Navigation bar at the top
+ */
+
+header {
+  text-align: center;
+}
+
+header ul {
+  padding: 30px 0;
+  background: rgba(99, 99, 99, .5);
+}
+
+header li {
+  display: inline;
+  padding: 0 5px 0 5px;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 1.1em;
+}
+
+header a {
+  text-decoration: none;
+  color: #DDDDDD;
+  padding: 0 20px;
+}
+
+header a:hover {
+  color: #BBBBBB;
+}
+
+header a.active {
+  color: #BBBBBB;
+}
+
+
+/**
+ * Slider list
+ */
+
+/* Leaves some space from the top when hyperlink is clicked */
+h1 {
+  padding-top: 50px;
+}
+
+h1 a {
+  font-size: 0.5em;
+  color: #FFF;
+  text-decoration: none;
+}
+
+h1 a:hover {
+  color: #CCCCCC;
+}
+
+.lead {
+  font-size: 1.2em;
+}
+
+.sliderList div {
+  height: 50px;
+  background: #EEEEEE;
+  margin: 0 auto;
+  max-width: 600px;
+  position: relative;
+  margin: 40px auto 0 auto;
+  border-radius: 5px;
+}
+
+.sliderList div p {
+  color: red;
+  background: linear-gradient(to top, rgba(0,0,0,1) , rgba(0,0,0,.4));
+  padding: 10px 30px;
+  text-align: left;
+  line-height: 28px;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  height: 30px;
+          transition: height .5s;
+  -webkit-transition: height .5s;
+     -moz-transition: height .5s;
+
+  overflow: hidden;  /* Ignore the extra space that the hidden test occupies */
+}
+
+.sliderList div p span:hover {
+  color: #A00;
+}
+
+.sliderList div p small {
+  /*opacity: 0;*/
+  /*display: none;*/
+  visibility: hidden;  /* Hide the description text by default */
+}
+
+/* Links */
+.sliderList div p a {
+  color: yellow;
+
+  pointer-events: none;  /* Desable the links */
+  cursor: default;
+}
+.sliderList div p a:hover {
+  color: #999900;
+}
+
+/* For when description is shown */
+
+.sliderList div.show-description span,
+.sliderList div.show-description span:hover {
+  color: #BABABA;
+  text-shadow: 1px 0 red, 0 -1px red, -1px 0 red, 0 1px red;
+}
+
+.sliderList div.show-description p {
+  color: yellow;
+  height: 150px;
+  overflow: auto;
+}
+
+.sliderList div.show-description p small {
+  color: yellow;
+  /*opacity: 1;*/
+  /*display: block;*/
+  visibility: visible;
+  text-shadow: 1px 0 blue, 0 -1px blue, -1px 0 blue, 0 1px blue;
+}
+
+.sliderList div.show-description p a {
+  pointer-events: auto;  /* Activate the links */
+  cursor: auto;
+}
+
+/**
+ * Card
+ */
+
+/*article {
+  max-width: 535px;
+  margin: 10px auto 20px auto;
+  padding: 0.1em 2.0em 2.0em 2.0em;
+  box-shadow: 0 8px 16px #999;
+  background:  #fafafa;
+}*/
+
+
+/**
+ * Button / input
+ */
+
+#contact-me {
+  margin: 0 auto;
+  width: 400px;
+}
+
+button {
+  border: 0 none;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 1.0em;
+  padding: 1.0em;
+}
+
+textarea {
+  box-sizing: border-box;
+  width: 400px;
+  height: 150px;
+  border: 0;
+  padding: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 18px;
+  margin-bottom: 4px;
+  background-color: rgba(230, 230, 230, 0.6);
+  color: #000;
+}
+
+#btn-send-message {
+  width: 248px;
+  background: #32CD32;
+  color: white;
+  float: right;
+}
+
+#btn-clear-message {
+  width: 148px;
+  float: left;
+}
+
+.btn-outline {
+    background: none;
+    padding: 12px 22px;
+    border: 2px solid #0099cc;
+    color: #0099cc;
+}
+
+.btn-outline:hover, .btn-outline:focus, .btn-outline:active,
+.btn-outline.active, .open > .dropdown-toggle.btn-outline {
+    color: #33a6cc;
+    background: #f0f0ff;
+    border-color: #33a6cc;
+}
+.btn-outline:active, .btn-outline.active {
+    border-color: #007299;
+    color: #007299;
+    box-shadow: none;
+}
+
+/* Placeholder text color */
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #555;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #555;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #555;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #555;
+}
+
+
+/**
+ * Footer
+ */
+
+footer {
+  font-size: 1.2em;
+  line-height: 3em;
+  padding: 40px 0;
+  color: white;
+  clear: both;
+  text-align: center;
+}
+
+footer a,
+footer a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+
+/**
+ * Styling for mobile devices
+ */
+
+@media (max-width: 500px) {
+  .brand {
+    font-size: 3.0em;
+    margin: 20px 0 0 0;
+    line-height: 50px;
+  }
+
+  .address-bar {
+    font-size: 1.3em;
+    margin: 10px 0 30px 0;
+  }
+
+  img.masa-photo {
+    height: 200px;
+    width: 200px;
+  }
+
+  header ul {
+    padding: 15px 0;
+  }
+
+  header li {
+    padding: 0;
+    font-size: 0.8em;
+  }
+
+  h1 {
+    padding-top: 15px;
+    font-size: 2.5em;
+  }
+
+  .sliderList div {
+    margin: 10px 12px;
+    font-size: 0.9em;
+  }
+}
