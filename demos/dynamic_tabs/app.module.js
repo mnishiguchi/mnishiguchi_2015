@@ -155,34 +155,10 @@
 
     // NOTE: When a directive requires a controller, its link function receives
     // that controller as the fourth argument.
-    // Taking advantage of this, contentPane can call the addPane
-    // function of tabs.
+    // Taking advantage of this, contentPane can call the addPane function of tabs.
 
     return directive;
 
   }
-
-  // --------------------------------------------------------------------------- //
-  // --------------------------------------------------------------------------- //
-
-
-  // I decode paragraphs that include unicode and escape sequence.
-  // https://docs.angularjs.org/api/ng/service/$sce
-  angular
-    .module( "app" )
-    .filter( "htmlFilter", htmlFilter );
-
-  htmlFilter.$inject = [
-    "$sce"
-  ];
-  function htmlFilter( $sce ) {
-
-    var filter = function( input ) {
-        return $sce.trustAsHtml( input );
-    };
-
-    return filter;
-
-  } // end htmlFilter
 
 })();

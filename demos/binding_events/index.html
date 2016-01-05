@@ -1,24 +1,103 @@
 <!DOCTYPE html>
 
-<html ng-app="mouseEventsApp">
+<html ng-app="app">
 
   <head>
     <meta charset="utf-8">
-    <title>mouse events</title>
+    <title>Binding events | Masatoshi Nishiguchi</title>
 
-    <!--Styles-->
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-    <!--AnglarJS-->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.min.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha256-xWeRKjzyg6bep9D1AsHzUPEWHbWMzlRc84Z0aG+tyms= sha512-mGIRU0bcPaVjr7BceESkC37zD6sEccxE+RJyQABbbKNe83Y68+PyPM5nrE1zvbQZkSHDCJEtnAcodbhlq2/EkQ==" crossorigin="anonymous">
+
+    <!-- Styles -->
+    <style>
+      section {
+        background-color: #caff70;
+        display: block;
+        width: 300px;
+        height: 300px;
+        margin: 0 auto;
+        border-radius: 10px;
+        line-height: 100%;
+      }
+      section p {
+        text-align: center;
+      }
+    </style>
+
+    <!-- LoadjQuery and AnglarJS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-rc.0/angular.min.js"></script>
+
   </head>
 
   <body>
 
-    <section enter leave>
-      Move the mouse pointer on me!
+    <h1>Binding events</h1>
+
+    <section
+      respond-to-mouseenter
+      respond-to-mouseleave
+      class="display-4">
+      <p>Move the mouse pointer on me!</p>
     </section>
+
+    <script>
+
+      (function() {
+
+        // Module declaraton.
+        var app = angular.module("app", [ ]);
+
+
+        // --------------------------------------------------------------------- //
+        // --------------------------------------------------------------------- //
+
+
+        // NOTE: Directives need not return a configuration object if we only use:
+        // - link function and
+        // - restrict option is 'A' (attribute)
+
+        /**
+         * Respond to mouseenter event.
+         */
+        app.directive( "respondToMouseenter", respondToMouseenter);
+
+        function respondToMouseenter() {
+
+          return link;
+
+          function link( scope, element ) {
+            element.bind( "mouseenter", function() {
+
+              element.children( ':first' ).html( "Welcome in!" );
+              element.css( "background-color", "#ff70ca" );
+            })
+          }
+        }
+
+
+        /**
+         * Respond to mouseleave event.
+         */
+        app.directive( "respondToMouseleave", respondToMouseleave );
+
+        function respondToMouseleave() {
+
+          return link;
+
+          function link( scope, element ) {
+            element.bind( "mouseleave", function() {
+
+              element.children( ':first' ).html( "I am leaving!" );
+              element.css( "background-color", "#caff70" );
+            })
+          }
+        }
+
+      })()
+
+    </script>
 
   </body>
 </html>
