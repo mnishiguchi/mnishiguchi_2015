@@ -42,14 +42,15 @@ $(document).ready( function() {
     vm.demos = [];
 
     // Load demo data.
-    vm.demos = addUrlsToDemos( demos );
+    vm.demos = loadDemoData( demos );
 
 
     /**
-     * Generate demoUrl and githubUrl for each demo based on my convention.
+     * Load JSON array of demos, generate demoUrl and githubUrl for each demo
+     * based on my convention, and add each demo data the generated urls.
      * @param demos A JSON array of demo info.
      */
-    function addUrlsToDemos( demos ) {
+    function loadDemoData( demos ) {
 
       var extendedWithUrls = _.map(demos, function(demo) {
 
@@ -68,7 +69,7 @@ $(document).ready( function() {
 
       return extendedWithUrls;
 
-    } // addUrlsToDemos
+    } // loadDemoData
 
   } // end AppController
 
@@ -121,6 +122,5 @@ $(document).ready( function() {
         desc: "",
       },
     ];
-
 
 })(); // end module

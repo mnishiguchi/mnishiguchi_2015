@@ -19,31 +19,38 @@
 
     // Data for tabs and contents.
     // This can be loaded from a service.
-    this.contents = [
-
-      {
-        title: "AngularJS",
-        body: "<a href='https://angularjs.org/'>[documentation]</a>"
-      },
-      {
-        title: "Angular2",
-        body: "<a href='https://angular.io/'>[documentation]</a>"
-      },
-      {
-        title: "ReactJS",
-        body: "<a href='https://facebook.github.io/react/'>[documentation]</a>"
-      },
-      {
-        title: "Ruby on Rails",
-        body: "<a href='http://rubyonrails.org/'>[documentation]</a>"
-      },
-      {
-        title: "Sinatra",
-        body: "<a href='http://www.sinatrarb.com/'>[documentation]</a>"
-      },
-
-    ]
+    this.contents = contents;
   }
+
+  var contents = [
+
+    {
+      title: "AngularJS",
+      body: [
+        "<a href='https://angularjs.org/'>[documentation]</a>",
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+        "Voluptate, ipsa. Veritatis, distinctio porro amet eius recusandae.",
+        "Ex accusamus, praesentium? Necessitatibus ad quae quaerat quibusdam quisquam reprehenderit atque ut quasi mollitia?",
+      ].join(""),
+    },
+    {
+      title: "Angular2",
+      body: "<a href='https://angular.io/'>[documentation]</a>"
+    },
+    {
+      title: "ReactJS",
+      body: "<a href='https://facebook.github.io/react/'>[documentation]</a>"
+    },
+    {
+      title: "Ruby on Rails",
+      body: "<a href='http://rubyonrails.org/'>[documentation]</a>"
+    },
+    {
+      title: "Sinatra",
+      body: "<a href='http://www.sinatrarb.com/'>[documentation]</a>"
+    },
+
+  ]
 
 
   // --------------------------------------------------------------------------- //
