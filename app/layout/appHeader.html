@@ -1,0 +1,27 @@
+<!--
+  appHeader
+-->
+
+<nav
+  class="navbar top-navbar"
+  ng-click="appHeader.changeBackground()"
+  ng-style="appHeader.css"
+  ng-attr-title="{{ appHeader.css.backgroundColor }}">
+
+  <a
+    ng-href="#/"
+    class="navbar-brand gravatarLink" >
+    <img src="https://s.gravatar.com/avatar/60515b6735ed4eeddbd1668f5fe9b5a0?s=36" alt="masatoshi">
+  </a>
+
+  <ul class="nav navbar-nav">
+    <li class="nav-item">
+      <a class="logo" href="#">
+        Masatoshi Nishiguchi
+      </a>
+    </li>
+  </ul>
+
+</nav>
+
+<div class="clearfix"></div>

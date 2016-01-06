@@ -1,0 +1,557 @@
+/*
+  Universal
+ */
+
+
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/background-position */
+body {
+  font-family: "Josefin Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: #000000;
+  background-image: url(http://i.imgur.com/kVJs7Pb.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+          background-size: cover;
+       -o-background-size: cover;
+}
+
+#main-container {
+  padding-top: 30px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+  color: #00aced;
+}
+
+h1 { font-size: 2.0em; }
+h2 { font-size: 1.8em; }
+h3 { font-size: 1.6em; }
+h4 { font-size: 1.4em; }
+h5 { font-size: 1.2em; }
+h6 { font-size: 1.0em; }
+
+h1.page_header {
+  font-size: 3.0em;
+  font-weight: 700;
+  letter-spacing: 4px;
+}
+
+h2.page_header {
+  font-weight: 300;
+  padding: 10px 0;
+}
+
+p {
+  font-size: 1.4em;
+  line-height: 1.6;
+  color: #DDDDDD;
+}
+
+.btn {
+  min-width: 100px;
+}
+
+a {
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+a:hover,
+a:focus,
+a:active {
+    text-decoration: none;
+    color: #0084b4;
+}
+
+p > a {
+  color: #AAAAAA;
+  font-style: italic;
+}
+
+label {
+  font-size: 1.3em;
+}
+
+.divider{
+  margin: 0 8px 0 8px;
+}
+
+.divider:before {
+  content: "|";
+}
+
+
+/*
+  Forms
+ */
+
+
+textarea,
+textarea:required,
+input[type="text"] {
+
+    background-color: #DDDDDD;
+}
+
+
+/*
+  Tables
+ */
+
+
+table th {
+  border-top: none !important;
+  color: #FFFFFF;
+  font-size: 1.7em;
+}
+
+table td > b {
+  font-size: 1.2em;
+  color: #FFFFFF;
+}
+
+table td {
+  font-size: 1.1em;
+  color: #FFFFFF;
+}
+
+table tr:last-child {
+  border-bottom: 1px solid #FFFFFF;
+}
+
+dt, dd {
+  color: #FFFFFF;
+}
+
+
+/*
+  Top-navbar
+ */
+
+
+.navbar {
+  padding: 18px 10px 5px 10px;
+}
+
+.logo {
+  font-family: 'Merriweather', serif;
+  font-size: 1.8em;
+  font-weight: 700;
+  color: #FFFFFF;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+          text-shadow: 1px 1px 2px #333333;
+     -moz-text-shadow: 1px 1px 2px #333333;
+  -webkit-text-shadow: 1px 1px 2px #333333;
+
+  height: 43px;
+  line-height: 43px;
+  float: left;
+}
+
+.logo:hover,
+.logo:focus {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.gravatarLink img {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  border-radius: 4px;
+  border: 2px solid #DDDDDD;
+}
+
+
+/*
+  Footer
+ */
+
+
+footer {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 3em;
+  margin-top: 40px;
+  padding-top: 5px;
+  border-top: 1px solid #DDDDDD;
+  color: #DDDDDD;
+  clear: both;
+}
+
+footer small {
+  float: left;
+}
+
+footer ul {
+  float: right;
+  list-style: none;
+}
+
+footer li {
+  float: left;
+  margin-left: 15px;
+}
+
+footer small,
+footer a {
+  color: #BBBBBB;
+  font-size: 0.9em;
+}
+
+
+/*
+  Tabs
+ */
+
+
+.nav-tabs {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-size: 0.8em;
+}
+
+.nav-tabs a {
+  text-decoration: none;
+  color: #DDDDDD;
+}
+
+.nav-tabs a:hover {
+  color: #BBBBBB;
+}
+
+.nav-tabs a.active {
+  color: #BBBBBB;
+}
+
+
+/*
+  Page contents
+ */
+
+
+.container.page {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 0 0 5px 5px;
+}
+
+.container.page h1 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.card-title {
+  font-size: 1.5em;
+  font-weight: 300;
+  padding: 0 0 10px 0;
+}
+
+.card-subtitle {
+  font-size: 1.1em;
+  color: #DDDDDD;
+}
+
+.page.about_me header {
+  padding-bottom: 40px;
+  text-align: center;
+}
+
+.page.about_me header h3 {
+  font-weight: 700;
+  letter-spacing: 4px;
+}
+
+.page.about_me header img.masatoshi {
+  height: auto;
+  width: 400px;
+  margin: 40px 0 0 0;
+  border: 7px solid white;
+  border-radius: 20px;
+}
+
+.page.about_me header h3 {
+  text-transform: uppercase;
+  margin-top: 30px;
+  color: #FFFFFF;
+}
+
+.page.about_me header .icon_link {
+  margin-top: 10px;
+}
+
+.page.about_me table {
+  margin-top: 20px;
+}
+
+.page.about_me td {
+  color: #DDDDDD;
+}
+
+/* Image filters for Qiita icon.
+  http://stackoverflow.com/questions/7415872/change-color-of-png-image-via-css */
+.page.about_me img.qiita {
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+
+  -webkit-filter: hue-rotate(75deg); filter: hue-rotate(75deg);
+  border-radius: 50%;
+}
+
+.page.about_me img.qiita:hover,
+.page.about_me img.qiita:focus,
+.page.about_me img.qiita:active {
+  -webkit-filter: opacity(80%); filter: opacity(80%);
+}
+
+.page.projects .movie-poster {
+  padding: 20px 0;
+  height: auto;
+  width: 300px;
+}
+
+.page.projects .no-info {
+  font-size: 1.0em;
+  padding: 5px 0;
+  color: #DDDDDD;
+}
+
+.page.blog input[type="text"] {
+  margin: 1.0em 0 0 0;
+}
+
+.page.blog hr {
+  max-width: 720px;
+  border-color: #DDDDDD;
+  margin: 0 0 0 0;
+}
+
+.blog_post h1,
+.blog_post h2,
+.blog_post h3,
+.blog_post h4,
+.blog_post h5,
+.blog_post h6 {
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.blog_post h1 { font-size: 1.7em; }
+.blog_post h2 { font-size: 1.6em; }
+.blog_post h3 { font-size: 1.5em; }
+.blog_post h4 { font-size: 1.3em; }
+.blog_post h5 { font-size: 1.1em; }
+.blog_post h6 { font-size: 0.9em; }
+
+.blog_post .post_body h1,
+.blog_post .post_body h2,
+.blog_post .post_body h3,
+.blog_post .post_body h4,
+.blog_post .post_body h5,
+.blog_post .post_body h6 {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 700;
+}
+
+.page.resources img,
+.blog_post .post_body img {
+  display: block;
+  height: auto;
+  width: 400px;
+  border: 2px solid white;
+  border-radius: 5px;
+  margin: 0 auto;
+}
+
+.blog_post header {
+  padding: 20px 0;
+}
+
+.blog_post header .post_title a {
+  color: #FFFFFF;
+  font-weight: 700;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.blog_post header .post_title a:hover,
+.blog_post header .post_title a:focus,
+.blog_post header .post_title a:active {
+  text-decoration: none;
+  color: #BBBBBB;
+}
+
+.blog_post header .post_meta {
+  font-size: 1.1em;
+  font-style: italic;
+  margin: 0 0 0 0;
+  color: #999999;
+}
+
+.blog_post header .post_meta a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.blog_post header .post_meta a:hover,
+.blog_post header .post_meta a:focus {
+  color:#DDDDDD;
+  text-decoration:underline;
+}
+
+.blog_post .post_body a {
+  text-decoration: none;
+  color: #FFFFFF;
+  font-style: italic;
+}
+
+.blog_post .post_body a:hover,
+.blog_post .post_body a:focus {
+  color: #0084b4;
+}
+
+.page.contact .form_1 label {
+  color: #DDDDDD;
+}
+
+.page.contact textarea {
+  font-size: 1.3em;
+}
+
+.page.contact .form_1 select.ng-invalid.ng-dirty,
+.page.contact .form_1 textarea.ng-invalid.ng-dirty {
+  box-shadow: 0 0 5px #FA787E;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 2px solid #FA787E;
+}
+
+.page.contact .form_1 select.ng-valid.ng-dirty,
+.page.contact .form_1 textarea.ng-valid.ng-dirty {
+  box-shadow: 0 0 5px #78FA89;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 2px solid #78FA89;
+}
+
+.page.contact .form_1 .form_alert p {
+  color: #FA787E;
+  font-size: 1.1em;
+  font-style: italic;
+}
+
+.page.contact .stars,
+.page.contact .star_count {
+  display: inline-block;
+  color: #999999;
+}
+
+.page.contact i.fa {
+  font-size: 1.8em;
+}
+
+.page.contact .stars > i.fa-star {
+  color: yellow;
+}
+
+.page.contact .stars > i.fa-star-o {
+  color: white;
+}
+
+
+/*
+   For tablet.
+ */
+
+
+@media (max-width: 62em) {
+
+  body {
+    background-repeat: repeat-y;
+    background-attachment: fixed;
+    background-position: center;
+
+    -webkit-background-size: contain;
+       -moz-background-size: contain;
+            background-size: contain;
+         -o-background-size: contain;
+  }
+
+  .logo {
+    font-size: 1.5em;
+  }
+
+  .container.page h1 {
+    font-size: 2.2em;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .page.about_me header {
+    padding-bottom: 40px;
+  }
+
+  .page.about_me header img.masatoshi {
+    height: auto;
+    width: 300px;
+    margin: 20px 0 0 0;
+    border: 4px solid white;
+    border-radius: 10px;
+  }
+
+  .page.resources img,
+  .blog_post .post_body img {
+    height: auto;
+    width: 300px;
+  }
+}
+
+
+/*
+   For smart phones.
+ */
+
+
+@media (max-width: 34em) {
+  .logo {
+    font-size: 1.1em;
+  }
+
+  footer{
+    font-size: 0.8em;
+  }
+
+  .nav-link {
+    font-size: 0.9em;
+  }
+
+  .page {
+    padding: 10px 10px;
+  }
+
+  .page.about_me header img.masatoshi {
+    height: auto;
+    width: 200px;
+  }
+
+  /* By using percentage, we can automatically adjust image sizes. */
+  .page.projects .movie-poster,
+  .page.resources img,
+  .blog_post .post_body img {
+    height: auto;
+    width: 90%;
+  }
+}
