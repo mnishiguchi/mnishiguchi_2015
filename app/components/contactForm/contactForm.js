@@ -90,6 +90,11 @@
 
     });
 
+
+  angular
+    .module( "app" )
+    .controller( "contactFormController", contactFormController );
+
   contactFormController.$inject = [
     "$scope",           // $scope.$watch and form validation.
     "ContactEmailService"
@@ -159,6 +164,11 @@
 
     });
 
+
+  angular
+    .module( "app" )
+    .controller( "starsController", starsController );
+
   starsController.$inject = [
     "$scope",
     "ContactEmailService"
@@ -205,6 +215,5 @@
     }
 
   } // end starsController
-
 
 })();

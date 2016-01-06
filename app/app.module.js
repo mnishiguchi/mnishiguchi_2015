@@ -17,6 +17,10 @@
     .controller( "AppController", AppController );
 
   AppController.$inject = [ ];
-  function AppController() {}
+  function AppController() {
+    // Sanity check.
+    this.hello = "world";
+    this.ossu  = "sekai";
+  }
 
 })();

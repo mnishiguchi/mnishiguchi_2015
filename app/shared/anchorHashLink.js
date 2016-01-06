@@ -31,7 +31,7 @@
 
     var directive = {
       restrict: "A",
-      controller: anchorHashLinkController,
+      controller: AnchorHashLinkController
     };
 
     return directive;
@@ -39,12 +39,16 @@
   } // end anchorHashLinkDirective
 
 
-  anchorHashLinkController.$inject = [
+  angular
+    .module( "app" )
+    .controller( "AnchorHashLinkController", AnchorHashLinkController );
+
+  AnchorHashLinkController.$inject = [
     "$scope",
     "$location",
     "$anchorScroll"
   ];
-  function anchorHashLinkController( $scope, $location, $anchorScroll ) {
+  function AnchorHashLinkController( $scope, $location, $anchorScroll ) {
 
     $scope.scrollTo = scrollTo;
 
@@ -54,17 +58,20 @@
      */
     function scrollTo( id ) {
 
-      var old = $location.hash();
+      // Remember original location hash.
+      var originalHash = $location.hash();
 
-      $location.hash(id);
+      // Change hashes to one based on specified element ID and
+      // jump to that location.
+      // https://docs.angularjs.org/api/ng/service/$anchorScroll
+      $location.hash( id );
       $anchorScroll();
 
-      // Reset to old to keep any additional routing logic from kicking in.
-      $location.hash(old);
+      // Reset to the original location hash.
+      $location.hash( originalHash );
 
     }
 
-  } // end anchorHashLinkController
-
+  } // end AnchorHashLinkController
 
 })();

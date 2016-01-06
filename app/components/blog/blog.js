@@ -14,6 +14,11 @@
       controller:  BlogPostsController,
     });
 
+
+  angular
+    .module( "app" )
+    .controller( "BlogPostsController", BlogPostsController );
+
   BlogPostsController.$inject = [
     "$filter"
   ];
@@ -51,6 +56,11 @@
 
     });
 
+
+  angular
+    .module( "app" )
+    .controller( "BlogPostController", BlogPostController );
+
   BlogPostController.$inject = [
     "$location",
     "$anchorScroll"
@@ -67,6 +77,5 @@
     vm.toggleVisibility = function() { vm.isVisible = !vm.isVisible; };
 
   } // end BlogPostController
-
 
 })();

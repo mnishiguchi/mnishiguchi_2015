@@ -26,7 +26,7 @@
           templateUrl: "app/partials/background.html",
           controller:  "PageController as page"
       })
-      .when("/project", {
+      .when("/projects", {
           tabIndex: 2,
           title:       "Projects",
           templateUrl: "app/partials/projects.html",

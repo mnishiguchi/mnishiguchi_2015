@@ -28,7 +28,7 @@
      * @param  title  A search key.
      * @return A promise of this GET request.
      */
-    function getData(title) {
+    function getData( title ) {
 
       // Creates a Deferred object which represents a task which will finish in the future.
       // https://docs.angularjs.org/api/ng/service/$q

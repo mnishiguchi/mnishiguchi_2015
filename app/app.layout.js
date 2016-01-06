@@ -8,12 +8,16 @@
     .component( "appHeader", {
 
       templateUrl: "app/layout/appHeader.html",
-      controller: appHeaderController
+      controller: AppHeaderController, // as appHeader
 
     });
 
-  appHeaderController.$inject = [ ];
-  function appHeaderController() {
+  angular
+    .module( "app" )
+    .controller( "AppHeaderController", AppHeaderController );
+
+  AppHeaderController.$inject = [ ];
+  function AppHeaderController() {
 
     var vm  = this;
 
@@ -51,7 +55,7 @@
 
     }
 
-  } // end appHeaderController
+  } // end AppHeaderController
 
 
   // --------------------------------------------------------------------------- //
@@ -79,12 +83,16 @@
         index: "="
       },
       templateUrl: 'app/layout/tabs.html',
-      controller:  tabsController,
+      controller:  TabsController, // as tabs
 
     });
 
-  tabsController.$inject = [  ];
-  function tabsController() {
+  angular
+    .module( "app" )
+    .controller( "TabsController", TabsController );
+
+  TabsController.$inject = [  ];
+  function TabsController() {
 
     var vm  = this;
 
@@ -103,7 +111,7 @@
     var routes = [
       "#/",
       "#/background",
-      "#/project",
+      "#/projects",
       "#/blog",
       "#/resources",
       "#/contact",
@@ -115,7 +123,6 @@
     vm.getRoute   = function(index) { return routes[ index ]; }
     vm.setTab     = function(index) { vm.index = index; };
 
-  } // end tabsController
-
+  } // end TabsController
 
 })();

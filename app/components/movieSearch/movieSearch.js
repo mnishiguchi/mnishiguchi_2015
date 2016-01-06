@@ -14,6 +14,11 @@
 
     });
 
+
+  angular
+    .module( "app" )
+    .controller( "MovieSearchController", MovieSearchController );
+
   MovieSearchController.$inject = [
     "$scope",
     "MovieDataService"
@@ -75,6 +80,11 @@
       templateUrl: "app/components/movieSearch/movie.html",
       controller:  movieController,
     });
+
+
+  angular
+    .module( "app" )
+    .controller( "movieController", movieController );
 
   movieController.$inject = [
     "$scope"
