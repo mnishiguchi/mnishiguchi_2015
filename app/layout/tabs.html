@@ -3,13 +3,12 @@
 -->
 
 <ul class="nav nav-tabs">
-  <li ng-repeat="index in [ 0, 1, 2, 3, 4, 5 ]" class="nav-item">
+  <li ng-repeat="tab in tabs.tabNames" class="nav-item">
     <a
-      ng-href="{{ tabs.getRoute( index ) }}"
-      ng-click="tabs.setTab( index )"
-      ng-class="{ active: tabs.isActive( index ) }"
+      ng-href="{{ tabs.routes[ $index ] }}"
+      ng-class="{ active: tabs.isActive( $index ) }"
       class="nav-link">
-      {{ tabs.getTabName( index ) }}
+      {{ tabs.tabNames[ $index ] }}
     </a>
   </li>
 </ul>

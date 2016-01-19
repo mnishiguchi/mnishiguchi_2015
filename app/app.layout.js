@@ -91,37 +91,31 @@
     .module( "app" )
     .controller( "TabsController", TabsController );
 
-  TabsController.$inject = [  ];
+  TabsController.$inject = [];
+
   function TabsController() {
 
     var vm  = this;
 
     // Initial state.
-    // none.
-
-    var tabNames = [
+    vm.tabNames = [
       "About me",
       "Background",
       "Projects",
       "Blog",
-      "Resources",
       "Contact"
     ];
 
-    var routes = [
+    vm.routes = [
       "#/",
       "#/background",
       "#/projects",
       "#/blog",
-      "#/resources",
       "#/contact",
     ]
 
     // Expose the public methods.
     vm.isActive   = function(index) { return (vm.index === index); };
-    vm.getTabName = function(index) { return tabNames[ index ]; }
-    vm.getRoute   = function(index) { return routes[ index ]; }
-    vm.setTab     = function(index) { vm.index = index; };
 
   } // end TabsController
 

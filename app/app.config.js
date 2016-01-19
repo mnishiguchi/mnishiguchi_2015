@@ -39,14 +39,8 @@
           controller:  "BlogController as page",
           resolve:     BlogController.resolve
       })
-      .when("/resources", {
-          tabIndex: 4,
-          title:       "Resources",
-          templateUrl: "app/partials/resources.html",
-          controller:  "PageController as page"
-      })
       .when("/contact", {
-          tabIndex: 5,
+          tabIndex: 4,
           title:       "Contact",
           templateUrl: "app/partials/contact.html",
           controller:  "PageController as page"
@@ -108,11 +102,6 @@
   ];
   function run( $rootScope, $route, $window ) {
 
-    // Set isStateLoading flag.
-    // $rootScope.$on( "$routeChangeStart", function() {
-    //   $rootScope.isStateLoading = true;
-    // });
-
     var baseTitle   = " | Masatoshi Nishiguchi";
 
     $rootScope.$on( "$routeChangeSuccess", function() {
@@ -124,9 +113,6 @@
 
       // Update tabIndex that is used by tabs.
       $rootScope.tabIndex = $route.current.tabIndex;
-
-      // Reset isStateLoading flag.
-      // $rootScope.isStateLoading = false;
     });
 
   } // end run
