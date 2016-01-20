@@ -21,54 +21,51 @@ describe( "tabs", function() {
 
     describe( "vm", function() {
 
-      it( "should have vm.isActive", function() {
-        expect( vm.isActive ).toBeDefined();
+      it( "should have vm.paths", function() {
+        expect( vm.paths ).toBeDefined();
       });
-      it( "should have vm.getTabName", function() {
-        expect( vm.getTabName ).toBeDefined();
+      it( "should have vm.labels", function() {
+        expect( vm.labels ).toBeDefined();
       });
-      it( "should have vm.getRoute", function() {
-        expect( vm.getRoute ).toBeDefined();
-      });
-      it( "should have vm.setTab", function() {
-        expect( vm.setTab ).toBeDefined();
+      it( "should have vm.activeTab", function() {
+        expect( vm.activeTab ).toBeDefined();
       });
 
     });
 
-    describe( "vm.isActive", function() {
+    // describe( "vm.isActive", function() {
 
-      it( "should tell whether the specified tab is active or not", function() {
-        expect( vm.isActive(0) ).toBe( true );
-        expect( vm.isActive(1) ).toBe( false );
-      });
+    //   it( "should tell whether the specified tab is active or not", function() {
+    //     expect( vm.isActive(0) ).toBe( true );
+    //     expect( vm.isActive(1) ).toBe( false );
+    //   });
 
-    });
-    describe( "vm.getTabName", function() {
+    // });
+    // describe( "vm.getTabName", function() {
 
-      it( "should return a correct tab name", function() {
-        expect( vm.getTabName(0) ).toBe( "About me" );
-        expect( vm.getTabName(1) ).not.toBe( "About me" );
-      });
+    //   it( "should return a correct tab name", function() {
+    //     expect( vm.getTabName(0) ).toBe( "About me" );
+    //     expect( vm.getTabName(1) ).not.toBe( "About me" );
+    //   });
 
-    });
-    describe( "vm.getRoute", function() {
+    // });
+    // describe( "vm.getRoute", function() {
 
-      it( "should return a correct route", function() {
-        expect( vm.getRoute(0) ).toBe( "#/" );
-        expect( vm.getRoute(4) ).not.toBe( "#/blog" );
-      });
+    //   it( "should return a correct route", function() {
+    //     expect( vm.getRoute(0) ).toBe( "#/" );
+    //     expect( vm.getRoute(4) ).not.toBe( "#/blog" );
+    //   });
 
-    });
-    describe( "vm.setTab", function() {
+    // });
+    // describe( "vm.setTab", function() {
 
-      it( "should set a tab to specified index", function() {
-        expect( vm.index ).toBe( 0 );
-        vm.setTab(4);
-        expect( vm.index ).toBe( 4 );
-        vm.setTab(2);
-        expect( vm.index ).toBe( 2 );
-      });
+    //   it( "should set a tab to specified index", function() {
+    //     expect( vm.index ).toBe( 0 );
+    //     vm.setTab(4);
+    //     expect( vm.index ).toBe( 4 );
+    //     vm.setTab(2);
+    //     expect( vm.index ).toBe( 2 );
+    //   });
 
-    });
+    // });
 });

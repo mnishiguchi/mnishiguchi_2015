@@ -253,6 +253,7 @@ footer a {
 }
 
 .card-title {
+  font-family: 'Ubuntu', sans-serif;
   font-size: 1.5em;
   font-weight: 300;
   padding: 0 0 10px 0;
@@ -262,6 +263,11 @@ footer a {
   font-size: 1.1em;
   color: #DDDDDD;
 }
+
+.card-block.details {
+  padding-top: 0;
+}
+
 
 .page.about_me header {
   padding-bottom: 40px;

@@ -42,3 +42,29 @@ Since Bing, Yahoo, Ask, and Google use the same protocol, having a Sitemap lets 
 - [Google chrome cast sender error if chrome cast extension is not installed or using incognito](http://stackoverflow.com/questions/24490323/google-chrome-cast-sender-error-if-chrome-cast-extension-is-not-installed-or-usi)
 - [AngularJS app not passing official W3C HTML5 validation](http://stackoverflow.com/questions/18607437/should-i-care-about-w3c-validation)
 
+==
+
+## Accessing properties that are configured in $routeProvider
+
+```js
+console.info( $route.routes[ $location.path() ] );
+```
+
+==
+
+## Extracting a list of paths from routes info
+```js
+      // Extracts a list of paths and tabNames from routes info.
+      vm.paths    = [];
+      vm.tabNames = [];
+
+      angular.forEach( $route.routes, function( value, key ) {
+
+        // If a valid path name is found, push to the lists.
+        if ( key == "/" || key.match( /^\/\w*[^\/]$/ ) ) {
+          vm.paths.push( "#" + key );
+          vm.tabNames.push( value.title );
+        }
+
+      });
+```

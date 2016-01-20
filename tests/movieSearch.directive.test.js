@@ -1,4 +1,4 @@
-describe( 'movieSearch', function() {
+xdescribe( 'movieSearch', function() {
 
   var vm;
 
