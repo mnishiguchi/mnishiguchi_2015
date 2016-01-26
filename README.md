@@ -5,23 +5,13 @@
 
 ==
 
-## Features
-- Client-side only, powered by AngularJS
-- Simple tab interface for site navigation (no routes)
-- Fetches data from public APIs
-  + [Open Movie Database](http://www.omdbapi.com/)
-  + [Blogger API](https://developers.google.com/blogger/?hl=en)
-
-==
-
 ## Dependencies
 This app is built with these open-source / free projects. Thank you so much.
 - [AngularJS v1.5.0-rc.0](https://angularjs.org/)
+- [Blogger API](https://developers.google.com/blogger/?hl=en)
 - [Bootstrap v4](http://v4-alpha.getbootstrap.com/)
 - [Font Awesome](https://fortawesome.github.io/Font-Awesome/)
 - [Gravatar](http://en.gravatar.com/)
-- [Open Movie Database](http://www.omdbapi.com/)
-- [Blogger API](https://developers.google.com/blogger/?hl=en)
 
 ==
 
@@ -67,4 +57,14 @@ console.info( $route.routes[ $location.path() ] );
         }
 
       });
+```
+
+==
+
+## Github pages
+
+http://stackoverflow.com/a/24099328/3837223
+
+```
+git commit -m 'rebuild pages' --allow-empty
 ```
