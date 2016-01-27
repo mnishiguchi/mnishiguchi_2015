@@ -8,7 +8,7 @@
     - Dynamically generate ID for this element based on post id.
     - Used for anchorHashLink.
   -->
-  <div ng-attr-id="{{ blogPost.topId }}"></div>
+  <div ng-attr-id="{{ $ctrl.topId }}"></div>
 
 
   <header>
@@ -19,8 +19,8 @@
     -->
     <h2 class="post_title">
       <a
-        ng-click="blogPost.toggleVisibility()">
-        {{ blogPost.post.title }}
+        ng-click="$ctrl.toggleVisibility()">
+        {{ $ctrl.post.title }}
       </a>
     </h2>
 
@@ -32,19 +32,19 @@
     <p class="post_meta">
       Posted by
       <a
-        ng-if="blogPost.post.author_url.length > 0"
-        ng-href="{{ blogPost.post.author_url }}">
-        {{ blogPost.post.author.displayName }}
+        ng-if="$ctrl.post.author_url.length > 0"
+        ng-href="{{ $ctrl.post.author_url }}">
+        {{ $ctrl.post.author.displayName }}
       </a>
       <span
-        ng-if="! blogPost.post.author_url" >
-        {{ blogPost.post.author.displayName }}
+        ng-if="! $ctrl.post.author_url" >
+        {{ $ctrl.post.author.displayName }}
       </span>
       <!-- https://docs.angularjs.org/api/ng/filter/date -->
-      on {{ blogPost.post.published | date:'short' }}
+      on {{ $ctrl.post.published | date:'short' }}
 
       <a
-        ng-href="{{ blogPost.post.url }}">
+        ng-href="{{ $ctrl.post.url }}">
         <img
           src="https://cdn2.iconfinder.com/data/icons/aquaticus/48%20X%2048/blogger.png"
           alt="ic-blogger"
@@ -62,17 +62,17 @@
       the Blogger's format includes Unicode and escape sequence,
   -->
   <div
-    ng-show="blogPost.isVisible"
+    ng-show="$ctrl.isVisible"
     class=" card card-block">
     <p
       class="post_body"
-      ng-bind-html="blogPost.post.content | htmlFilter">
+      ng-bind-html="$ctrl.post.content | htmlFilter">
     </p>
 
     <!-- Link to top of this article -->
     <a
-      ng-show="blogPost.isVisible"
-      ng-click="scrollTo( blogPost.topId )"
+      ng-show="$ctrl.isVisible"
+      ng-click="scrollTo( $ctrl.topId )"
       anchor-hash-link>
 
       <span class="fa-stack fa-lg">
@@ -83,8 +83,8 @@
 
     <!-- Toggle visibility -->
     <a
-      ng-show="blogPost.isVisible"
-      ng-click="blogPost.toggleVisibility() ; scrollTo( blogPost.topId )"
+      ng-show="$ctrl.isVisible"
+      ng-click="$ctrl.toggleVisibility() ; scrollTo( $ctrl.topId )"
       anchor-hash-link >
 
       <span class="fa-stack fa-lg">

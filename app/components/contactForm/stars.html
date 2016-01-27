@@ -1,11 +1,11 @@
 <div ng-repeat="pos in [ 1, 2, 3, 4, 5 ]" class="stars">
   &nbsp;
   <i
-    ng-class="stars.getIconClass( pos )"
-    ng-click="stars.data.rating = pos">
+    ng-class="$ctrl.getIconClass( pos )"
+    ng-click="$ctrl.data.rating = pos">
   </i>
 </div>
 
 <div class="star_count">
-  &nbsp;( <span ng-bind="stars.data.rating"></span> )
+  &nbsp;( <span ng-bind="$ctrl.data.rating"></span> )
 </div>

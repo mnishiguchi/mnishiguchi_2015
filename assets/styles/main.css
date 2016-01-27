@@ -375,7 +375,7 @@ footer a {
 .blog_post .post_body img {
   display: block;
   height: auto;
-  width: 400px;
+  max-width: 400px;
   border: 2px solid white;
   border-radius: 5px;
   margin: 0 auto;

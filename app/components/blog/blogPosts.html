@@ -5,12 +5,12 @@
 <!-- Filter -->
 <input type="text"
   ng-model="filterKey"
-  ng-change="blogPosts.filterData( filterKey )"
+  ng-change="$ctrl.filterData( filterKey )"
   placeholder="Filter the posts"
   class="form-control">
 
 <!-- Loading indicator -->
-<div ng-if="! blogPosts.posts">
+<div ng-if="! $ctrl.posts">
 
   <i class="fa fa-spinner fa-spin"></i>
   Loading data...
@@ -19,7 +19,7 @@
 
 <!-- Blog list -->
 <div
-  ng-repeat="post in blogPosts.filteredPosts">
+  ng-repeat="post in $ctrl.filteredPosts">
 
   <blog-post
     post="post">

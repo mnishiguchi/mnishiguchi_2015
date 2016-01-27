@@ -3,10 +3,10 @@
 -->
 
 <ul class="nav nav-tabs">
-  <li ng-repeat="label in tabs.labels track by $index" class="nav-item">
+  <li ng-repeat="label in $ctrl.labels track by $index" class="nav-item">
     <a
-      ng-href="{{ tabs.paths[ $index ] }}"
-      ng-class="{ active: label == tabs.activeTab }"
+      ng-href="{{ $ctrl.paths[ $index ] }}"
+      ng-class="{ active: label == $ctrl.activeTab }"
       class="nav-link">
       {{ label }}
     </a>

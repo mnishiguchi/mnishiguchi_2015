@@ -7,7 +7,8 @@
 
 ## Dependencies
 This app is built with these open-source / free projects. Thank you so much.
-- [AngularJS v1.5.0-rc.0](https://angularjs.org/)
+- [AngularJS v1.5.0-rc.1](https://angularjs.org/)
+  + [1.5.0-rc.1 quantum-fermentation (2016-01-15)](https://github.com/angular/angular.js/blob/master/CHANGELOG.md#150-rc1-quantum-fermentation-2016-01-15) 
 - [Blogger API](https://developers.google.com/blogger/?hl=en)
 - [Bootstrap v4](http://v4-alpha.getbootstrap.com/)
 - [Font Awesome](https://fortawesome.github.io/Font-Awesome/)

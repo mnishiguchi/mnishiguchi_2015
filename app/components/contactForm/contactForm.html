@@ -8,14 +8,14 @@
 <form novalidate
   name="form_1"
   class="form_1"
-  ng-submit="form_1.$valid && contactForm.handleMessageSubmit()">
+  ng-submit="form_1.$valid && $ctrl.handleMessageSubmit()">
 
   <!-- Input field for message -->
   <fieldset class="form-group">
     <label for="message">Message</label>
     <textarea
       required
-      ng-model="contactForm.data.message"
+      ng-model="$ctrl.data.message"
       ng-minlength="10"
       placeholder="Place questions or comments here"
       class="form-control"
