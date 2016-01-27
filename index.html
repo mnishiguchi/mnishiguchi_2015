@@ -29,8 +29,17 @@
   <link href='https://fonts.googleapis.com/css?family=Merriweather:400, 700' rel='stylesheet' type='text/css'>
   <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:300,400,700,400italic" rel="stylesheet" type="text/css">
   <link href='https://fonts.googleapis.com/css?family=Ubuntu:700' rel='stylesheet' type='text/css'>
-  <!-- Load bootstrap -->
+
+  <!--
+    Load bootstrap
+    TODO: There seems to be a breaking change to 4.0.0-alpha.2.
+          This app does not work with 4.0.0-alpha.2.
+    -->
+  <!--
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha256-xWeRKjzyg6bep9D1AsHzUPEWHbWMzlRc84Z0aG+tyms= sha512-mGIRU0bcPaVjr7BceESkC37zD6sEccxE+RJyQABbbKNe83Y68+PyPM5nrE1zvbQZkSHDCJEtnAcodbhlq2/EkQ==" crossorigin="anonymous">
+   -->
   <link href="assets/styles/vendor/bootstrap.min.css" rel="stylesheet" type='text/css'>
+
   <!-- Load app styles -->
   <link rel="stylesheet" type='text/css' href="assets/styles/main.css" />
 
@@ -58,10 +67,14 @@
     </div>
   </noscript>
 
-  <!--Load AngularJS-->
-  <script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
-  <script type="text/javascript" src="node_modules/angular-route/angular-route.min.js"></script>
-  <script type="text/javascript" src="node_modules/angular-messages/angular-messages.min.js"></script>
+  <!--
+    Load AngularJS
+    TODO: There seems to be a breaking change to 1.5.0-rc.1.
+          This app does not work with 1.5.0-rc.1.
+    -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-rc.0/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-rc.0/angular-route.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-rc.0/angular-messages.min.js"></script>
   <!--Load app scripts-->
   <script type="text/javascript" src="app/app.js"></script>
   <script type="text/javascript" src="app/components/contactForm/contactForm.js"></script>
